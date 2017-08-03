@@ -10,15 +10,42 @@
 	</style>
 </head>
 <body>
+<!-- ##header## -->
 	<header>
-		<div class="top_headline">##top_headline##</div>
-		<nav>##nav##</nav>
+		<div class="topHeadline">
+			<p class="topHeadline__announcement"></p>
+			<p class="contactInfo contactInfo--topHeadline">
+				<p class="contactInfo__phone">0084-2365-56984</p>
+				<p class="contactInfo__email">info@university.com</p>
+				<ul class="contactInfo__socialMediaIcons">
+					<a href="#" class="contactInfo__socialMediaIcon"></a>
+					<a href="#" class="contactInfo__socialMediaIcon"></a>
+					<a href="#" class="contactInfo__socialMediaIcon"></a>
+					<a href="#" class="contactInfo__socialMediaIcon"></a>
+				</ul>
+			</p>
+		</div>
+
+		<nav class="navBar">
+			<h1 class="navBar__title">Univers</h1>
+			<ul class="navBar__Items">
+				<li class="navBar__item"><a class="navBar__link" href="#">Home</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="#">About</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="#">Services</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="#">Courses</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="#">News</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="#">Teacher</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="#">Pricing</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="#">Gallery</a></li>
+				<li class="navBar__item"><a class="navBar__link" href="#">Contact</a></li>
+			</ul>
+		</nav>
 		<div class="hero">
-			<!-- ##hero## -->
 			<div class="header header--hero">
 				<p class="header__topTitle">The Best Learning Institution</p>
 				<h2 class="header__title">Welcome to Our University</h2>
 				<p class="header__caption">We believer there is nothing more important than education</p>
+				<a href="#" class="button"></a>
 			</div>
 		</div>
 	</header>
@@ -26,17 +53,61 @@
 	<main>
 <!-- ##about_us## -->
 		<section>
-			<header class="header">
-				<h2 class="header__title header__title--uppercase">About Us</h2>
+			<header class="header header--section">
+				<h2 class="header__title">About Us</h2>
 			</header>
+			<article>
+				<header class="header header--article">
+					<h3 class="header__title">Why we are better</h3>
+				</header>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sint magnam itaque cum atque ex omnis quos impedit quidem suscipit.</p>
+
+				<div class="detailsContainer">
+					<details>
+						<summary>Lorem ipsum dolor.</summary>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
+					</details>
+					
+					<details>
+						<summary>Lorem ipsum dolor.</summary>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
+					</details>
+					
+					<details>
+						<summary>Lorem ipsum dolor.</summary>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
+					</details>
+					
+					<details>
+						<summary>Lorem ipsum dolor.</summary>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
+					</details>
+				</div>
+
+				<img src="http://unsplash.it/602/504">
+			</article>
+
 		</section>
 <!-- ##education_services## -->
 		<section>
 			<header class="header">
-				<h2 class="header__title">Education Services</h2>
+				<h2 class="header__title header__title--capitalize">Education Services</h2>
 				<p class="header__subTitle">Learn From Best Staff</p>
 				<p class="header__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse natus aperiam facilis, consectetur tenetur repellat, harum corporis unde quos eligendi similique optio sapiente earum impedit.</p>
 			</header>
+
+			<nav class="cards">
+				<ul class="cards__items">
+					<li class="cards__item"><a href="#" class="card card--service"></a></li>
+					<li class="cards__item"><a href="#" class="card card--service"></a></li>
+					<li class="cards__item"><a href="#" class="card card--service"></a></li>
+				</ul>
+				<div class="buttons">
+					<a href="#" class="button">Special Services</a>
+					<a href="#" class="button">View All </a>
+				</div>
+			</nav>
 		</section>
 <!-- ##our_featured_courses## -->
 		<section>
@@ -44,12 +115,33 @@
 				<h2 class="header__title">Our Featured Courses</h2>
 				<p class="header__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, nisi.</p>
 			</header>
+
+			<div class="cards">
+				<ul class="cards__items">
+					<li class="cards__item"><article class="card card--course"></article></li>
+					<li class="cards__item"><article class="card card--course"></article></li>
+					<li class="cards__item"><article class="card card--course"></article></li>
+				</ul>
+				<a href="#" class="button">View All Courses</a>
+			</div>
 		</section>
 <!-- ##latest_news## -->
 		<section>
 			<header class="header">
 				<h2 class="header__title">Latest News</h2>
 			</header>
+
+			<div class="cards">
+				<ul class="cards__items">
+					<li class="cards__item"><article class="card card--news"></article></li>
+					<li class="cards__item"><article class="card card--news"></article></li>
+					<li class="cards__item"><article class="card card--news"></article></li>
+				</ul>
+				<div class="buttons">
+					<a href="#" class="button">Our Top News</a>
+					<a href="#" class="button">View All News</a>
+				</div>
+			</div>
 		</section>
 <!-- ##our_teacher## -->
 		<section>
@@ -57,25 +149,52 @@
 				<h2 class="header__title">Our Teacher</h2>
 				<p class="header__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ducimus magni dolorem, ipsum rerum modi velit consectetur sequi, architecto harum fugiat asperiores fugit, nihil vero!</p>
 			</header>
+
+			<div class="cards">
+				<ul class="cards__items">
+					<li class="cards__item"><article class="card card--teacher"></article></li>
+					<li class="cards__item"><article class="card card--teacher"></article></li>
+					<li class="cards__item"><article class="card card--teacher"></article></li>
+				</ul>
+				<a href="#" class="button">All Teachers</a>
+			</div>
 		</section>
 <!-- ##the_best_pricing_we_offered## -->
 		<section>
 			<header class="header">
 				<p class="header__topTitle">Chooses Your Pricing</p>
-				<h2 class="header__title"></h2>
+				<h2 class="header__title">The Best Pricing We Offered</h2>
 			</header>
+
+			<div class="cards">
+				<ul class="cards__items">
+					<li class="cards__item"><article class="card card--plan"></article></li>
+					<li class="cards__item"><article class="card card--plan"></article></li>
+					<li class="cards__item"><article class="card card--plan"></article></li>
+				</ul>
+			</div>
 		</section>
 <!-- ##our_testamonial## -->
 		<section>
 			<header class="header">
 				<h2 class="header__title">Our Testemonial</h2>
 			</header>
+
+			<div class="slideShow">
+				<div class="cards">
+					<ul class="cards__items">
+						<li class="cards__item"><article class="card card--testimonial"></article></li>
+						<li class="cards__item"><article class="card card--testimonial"></article></li>
+					</ul>
+				</div>
+				<div class="slideShow__indicator"></div>
+			</div>
 		</section>
 <!-- ##our_gallery## -->
 		<section>
 			<header class="header">
 				<h2 class="header__title">Our Gallery</h2>
-				<p class="header__caption"></p>
+				<p class="header__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quos, reprehenderit placeat.</p>
 			</header>
 		</section>
 <!-- ##contact## -->
@@ -84,6 +203,7 @@
 		</section>
 	</main>
 	<footer>
+		<address class="contactInfo"></address>
 		
 	</footer>
 </body>
