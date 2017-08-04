@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Univers</title>
+	<link rel="stylesheet" type="text/css" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
 		* {
 			border: 1px solid red;
@@ -13,15 +14,23 @@
 <!-- ##header## -->
 	<header>
 		<div class="topHeadline">
-			<p class="topHeadline__announcement"></p>
+			<p class="topHeadline__announcement">Welcome to University Template</p>
 			<p class="contactInfo contactInfo--topHeadline">
 				<p class="contactInfo__phone">0084-2365-56984</p>
 				<p class="contactInfo__email">info@university.com</p>
-				<ul class="contactInfo__socialMediaIcons">
-					<a href="#" class="contactInfo__socialMediaIcon"></a>
-					<a href="#" class="contactInfo__socialMediaIcon"></a>
-					<a href="#" class="contactInfo__socialMediaIcon"></a>
-					<a href="#" class="contactInfo__socialMediaIcon"></a>
+				<ul class="contactInfo__socialMediaIcons socialMediaIcons">
+					<li class="socialMediaIcons__item">
+						<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					</li>
+					<li class="socialMediaIcons__item">
+						<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					</li>
+					<li class="socialMediaIcons__item">
+						<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</li>
+					<li class="socialMediaIcons__item">
+						<a href="#" class="socialMediaIcon__icon"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+					</li>
 				</ul>
 			</p>
 		</div>
@@ -99,9 +108,33 @@
 
 			<nav class="cards">
 				<ul class="cards__items">
-					<li class="cards__item"><a href="#" class="card card--service"></a></li>
-					<li class="cards__item"><a href="#" class="card card--service"></a></li>
-					<li class="cards__item"><a href="#" class="card card--service"></a></li>
+					<li class="cards__item">
+						<a href="#" class="card card--service">
+							<img src="http://unsplash.it/150/134">
+							<header class="header header--card">
+								<p class="card__title">Course Management</p>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+						</a>
+					</li>
+					<li class="cards__item">
+						<a href="#" class="card card--service">
+							<img src="http://unsplash.it/150/134">
+							<header class="header header--card">
+								<p class="card__title">Update My Information</p>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+						</a>
+					</li>
+					<li class="cards__item">
+						<a href="#" class="card card--service">
+							<img src="http://unsplash.it/150/134">
+							<header class="header header--card">
+								<p class="card__title">Books and Library</p>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+						</a>
+					</li>
 				</ul>
 				<div class="buttons">
 					<a href="#" class="button">Special Services</a>
@@ -118,9 +151,42 @@
 
 			<div class="cards">
 				<ul class="cards__items">
-					<li class="cards__item"><article class="card card--course"></article></li>
-					<li class="cards__item"><article class="card card--course"></article></li>
-					<li class="cards__item"><article class="card card--course"></article></li>
+					<li class="cards__item">
+						<article class="card card--course">
+							<img src="http://unsplash.it/358/230">
+							<header class="header header--card">
+								<p class="card__topTitle card__topTitle--date">May 4, 2017</p>
+								<h3 class="card__title">Application Design</h3>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+
+							<a href="#" class="button">Apply</a>
+						</article>
+					</li>
+					<li class="cards__item">
+						<article class="card card--course">
+							<img src="http://unsplash.it/358/230">
+							<header class="header header--card">
+								<p class="card__topTitle card__topTitle--date">May 4, 2017</p>
+								<h3 class="card__title">Multimedia & Graphic</h3>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+
+							<a href="#" class="button">Apply</a>
+						</article>
+					</li>
+					<li class="cards__item">
+						<article class="card card--course">
+							<img src="http://unsplash.it/358/230">
+							<header class="header header--card">
+								<p class="card__topTitle card__topTitle--date">May 4, 2017</p>
+								<h3 class="card__title">Chemical Engineering</h3>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+
+							<a href="#" class="button">Apply</a>
+						</article>
+					</li>
 				</ul>
 				<a href="#" class="button">View All Courses</a>
 			</div>
@@ -133,9 +199,42 @@
 
 			<div class="cards">
 				<ul class="cards__items">
-					<li class="cards__item"><article class="card card--news"></article></li>
-					<li class="cards__item"><article class="card card--news"></article></li>
-					<li class="cards__item"><article class="card card--news"></article></li>
+					<li class="cards__item">
+						<article class="card card--news">
+							<img src="http://unsplash.it/358/230">
+							<header class="header header--card">
+								<p class="card__topTitle card__topTitle--date">18<br>May</p>
+								<h3 class="card__title">Those Other University Expenses You Aren't Thinking About</h3>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas earum omnis sequi expedita ipsam illo amet mollitia, odit delectus fugit atque ex officiis consequatur.</p>
+
+							<a href="#" class="more_info_link">Read More</a>
+						</article>
+					</li>
+					<li class="cards__item">
+						<article class="card card--news">
+							<img src="http://unsplash.it/358/230">
+							<header class="header header--card">
+								<p class="card__topTitle card__topTitle--date">18<br>May</p>
+								<h3 class="card__title">Those Other University Expenses You Aren't Thinking About</h3>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti libero iste vel quo, sunt ratione, ex aut eius repellendus eum voluptatum minus fuga error.</p>
+
+							<a href="#" class="more_info_link">Read More</a>
+						</article>
+					</li>
+					<li class="cards__item">
+						<article class="card card--news">
+							<img src="http://unsplash.it/358/230">
+							<header class="header header--card">
+								<p class="card__topTitle card__topTitle--date">18<br>May</p>
+								<h3 class="card__title">Those Other University Expenses You Aren't Thinking About</h3>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti libero iste vel quo, sunt ratione, ex aut eius repellendus eum voluptatum minus fuga error.</p>
+
+							<a href="#" class="more_info_link">Read More</a>	
+						</article>
+					</li>
 				</ul>
 				<div class="buttons">
 					<a href="#" class="button">Our Top News</a>
@@ -152,9 +251,69 @@
 
 			<div class="cards">
 				<ul class="cards__items">
-					<li class="cards__item"><article class="card card--teacher"></article></li>
-					<li class="cards__item"><article class="card card--teacher"></article></li>
-					<li class="cards__item"><article class="card card--teacher"></article></li>
+					<li class="cards__item">
+						<article class="card card--teacher">
+							<img src="http://unsplash.it/358/412">
+							<header class="header header--card">
+								<h3 class="card__title">Louis Lehman</h3>
+								<p class="card__subTitle">IT Expert & Teacher</p>
+							</header>
+							<p>Stay Connected</p>
+							<ul class="socialMediaIcons">
+								<li class="socialMediaIcons__item">
+									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								</li>
+								<li class="socialMediaIcons__item">
+									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								</li>
+								<li class="socialMediaIcons__item">
+									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li class="cards__item">
+						<article class="card card--teacher">
+							<img src="http://unsplash.it/358/412">
+							<header class="header header--card">
+								<h3 class="card__title">Jemery Remerk</h3>
+								<p class="card__subTitle">Multi Teacher</p>
+							</header>
+							<p>Stay Connected</p>
+							<ul class="socialMediaIcons">
+								<li class="socialMediaIcons__item">
+									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								</li>
+								<li class="socialMediaIcons__item">
+									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								</li>
+								<li class="socialMediaIcons__item">
+									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li class="cards__item">
+						<article class="card card--teacher">
+							<img src="http://unsplash.it/358/412">
+							<header class="header header--card">
+								<h3 class="card__title">Arnard Chesek</h3>
+								<p class="card__subTitle">Accounting & Teacher</p>
+							</header>
+							<p>Stay Connected</p>
+							<ul class="socialMediaIcons">
+								<li class="socialMediaIcons__item">
+									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								</li>
+								<li class="socialMediaIcons__item">
+									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								</li>
+								<li class="socialMediaIcons__item">
+									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+								</li>
+							</ul>
+						</article>
+					</li>
 				</ul>
 				<a href="#" class="button">All Teachers</a>
 			</div>
@@ -162,13 +321,29 @@
 <!-- ##the_best_pricing_we_offered## -->
 		<section>
 			<header class="header">
-				<p class="header__topTitle">Chooses Your Pricing</p>
-				<h2 class="header__title">The Best Pricing We Offered</h2>
+				<p class="header__topTitle">Choose Your Pricing</p>
+				<h2 class="header__title">The Best Pricing We Offer</h2>
 			</header>
 
 			<div class="cards">
 				<ul class="cards__items">
-					<li class="cards__item"><article class="card card--plan"></article></li>
+					<li class="cards__item">
+						<article class="card card--plan">
+							<header class="header header--card">
+								<h3 class="card__title">Trial</h3>
+								<div class="card__subTitle card__subTitle--price">
+									<p>Free</p>
+									<p>30 Days</p>
+								</div>
+							</header>
+
+							<ul>
+								
+							</ul>
+
+						<a href="#" class="button">Choose Plan</a>
+						</article>
+					</li>
 					<li class="cards__item"><article class="card card--plan"></article></li>
 					<li class="cards__item"><article class="card card--plan"></article></li>
 				</ul>
@@ -259,14 +434,123 @@
 		</section>
 <!-- ##contact## -->
 		<section>
-			<section>
-				
+			<section class="subSection subSection--highlight">
+				<header class="subSection__header">
+					<h3>Subscribe Weekly Newsletter</h3>
+				</header>
+				<form class="singleInputForm">
+					<input type="text" name="email" class="singleInputForm__input">
+					<button type="submit" class="singleInputForm__submit button button--form">Submit</button>
+				</form>
 			</section>
+			<section class="subSection">
+				<header class="subSection__header">
+					<h3 class="subSection__title">Get In Touch</h3>
+				</header>
+				<form>
+					<input type="text" name="name">
+					<input type="text" name="email">
+					<input type="text" name="subject">
+					<textarea>type your message...</textarea>
+					<button type="submit" class="button button--form"></button>
+				</form>
+			</section>
+			<section class="subSection">
+				<header class="subSection__header">
+					<h3 class="subSection__title">Address</h3>
+				</header>
+				<ul class="addressList addressList--large">
+					<li class="addressList__item addressList__item--location">
+						<p>Lorem ipsum dolor sit.<br>
+							Lorem ipsum dolor sit.
+						</p>
+					</li>
+					<li class="addressList__item addressList__item--phone">
+						<p>Lorem ipsum dolor sit.<br>
+							Lorem ipsum dolor sit.
+						</p>
+					</li>
+					<li class="addressList__item addressList__item--email">
+						<p>Lorem ipsum dolor sit.<br>
+							Lorem ipsum dolor sit.
+						</p>
+					</li>
+				</ul>
+			</section>
+
 		</section>
 	</main>
+<!-- ##footert## -->
 	<footer>
-		<address class="contactInfo"></address>
+		<address class="contactInfo">
+			<h1>Univers</h1>
+			<ul class="addressList addressList--footer">
+				<li class="addressList__item addressList__item--hotline">Lorem ipsum dolor sit amet.</li>
+				<li class="addressList__item addressList__item--email">Lorem ipsum.</li>
+				<li class="addressList__item addressList__item--location">Lorem ipsum dolor sit amet.</li>
+			</ul>
+		</address>
+		<nav>
+			<div class="navList">
+				<h3 class="navList__heading"></h3>
+				<ul class="navList__list">
+					<li class="navList__item"><a href="#">Application Design</a></li>
+					<li class="navList__item"><a href="#">Multimedia & Graphic</a></li>
+					<li class="navList__item"><a href="#">Chemical Engineering</a></li>
+					<li class="navList__item"><a href="#">Computer Science</a></li>
+					<li class="navList__item"><a href="#">Microbiology</a></li>
+					<li class="navList__item"><a href="#">Product Management</a></li>
+				</ul>
+			</div>
+			<div class="navList">
+				<h3 class="navList__heading"></h3>
+				<ul class="navList__list">
+					<li class="navList__item"><a href="#">Home</a></li>
+					<li class="navList__item"><a href="#">About</a></li>
+					<li class="navList__item"><a href="#">Services</a></li>
+					<li class="navList__item"><a href="#">Our Courses</a></li>
+					<li class="navList__item"><a href="#">Our News</a></li>
+					<li class="navList__item"><a href="#">Our Coaching</a></li>
+				</ul>
+			</div>
+
+			<div class="navList">
+				<h3 class="navList__heading"></h3>
+				<ul class="navList__list">
+					<li class="navList__item"><a href="#">Pricing</a></li>
+					<li class="navList__item"><a href="#">Testimonial</a></li>
+					<li class="navList__item"><a href="#">Our Gallery</a></li>
+					<li class="navList__item"><a href="#">Our Newsletter</a></li>
+					<li class="navList__item"><a href="#">Contacts</a></li>
+				</ul>
+			</div>
+
+			<div class="navList navList">
+				<h3 class="navList__heading"></h3>
+				<ul class="navList__list">
+					<li class="navList__item navList__item--article">
+						<article>
+							<img src="http://unsplash.it/89/82">
+							<header class="header header--article">
+								<h2 class="header__title">Application Design</h2>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						</article>
+					</li>
+					<li class="navList__item navList__item--article">
+						<article>
+							<img src="http://unsplash.it/89/82">
+							<header class="header header--article">
+								<h2 class="header__title">Application Design</h2>
+							</header>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</nav>
 		
+		<p>Copyright &#169; Univers. All rights reserved.
 	</footer>
 </body>
 </html>
