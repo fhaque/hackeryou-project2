@@ -8,6 +8,18 @@
 		* {
 			border: 1px solid red;
 		}
+
+		.visuallyHidden {
+            position: absolute;
+            clip: rect(1px 1px 1px 1px); 
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            padding: 0;
+            border: 0;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+        }
 	</style>
 </head>
 <body>
@@ -21,15 +33,19 @@
 				<ul class="contactInfo__socialMediaIcons socialMediaIcons">
 					<li class="socialMediaIcons__item">
 						<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<p class="visuallyHidden">Facebook</p>
 					</li>
 					<li class="socialMediaIcons__item">
 						<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<p class="visuallyHidden">Twitter</p>
 					</li>
 					<li class="socialMediaIcons__item">
 						<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+						<p class="visuallyHidden">LinkedIn</p>
 					</li>
 					<li class="socialMediaIcons__item">
 						<a href="#" class="socialMediaIcon__icon"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+						<p class="visuallyHidden">Youtube</p>
 					</li>
 				</ul>
 			</p>
@@ -114,7 +130,9 @@
 							<header class="header header--card">
 								<p class="card__title">Course Management</p>
 							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+							<p  class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
+							</p>
 						</a>
 					</li>
 					<li class="cards__item">
@@ -123,7 +141,9 @@
 							<header class="header header--card">
 								<p class="card__title">Update My Information</p>
 							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
+							</p>
 						</a>
 					</li>
 					<li class="cards__item">
@@ -132,7 +152,9 @@
 							<header class="header header--card">
 								<p class="card__title">Books and Library</p>
 							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
+							</p>
 						</a>
 					</li>
 				</ul>
@@ -158,7 +180,9 @@
 								<p class="card__topTitle card__topTitle--date">May 4, 2017</p>
 								<h3 class="card__title">Application Design</h3>
 							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
+							</p>
 
 							<a href="#" class="button">Apply</a>
 						</article>
@@ -170,7 +194,9 @@
 								<p class="card__topTitle card__topTitle--date">May 4, 2017</p>
 								<h3 class="card__title">Multimedia & Graphic</h3>
 							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
+							</p>
 
 							<a href="#" class="button">Apply</a>
 						</article>
@@ -182,7 +208,9 @@
 								<p class="card__topTitle card__topTitle--date">May 4, 2017</p>
 								<h3 class="card__title">Chemical Engineering</h3>
 							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
+							</p>
 
 							<a href="#" class="button">Apply</a>
 						</article>
@@ -206,7 +234,9 @@
 								<p class="card__topTitle card__topTitle--date">18<br>May</p>
 								<h3 class="card__title">Those Other University Expenses You Aren't Thinking About</h3>
 							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas earum omnis sequi expedita ipsam illo amet mollitia, odit delectus fugit atque ex officiis consequatur.</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas earum omnis sequi expedita ipsam illo amet mollitia, odit delectus fugit atque ex officiis consequatur.
+							</p>
 
 							<a href="#" class="more_info_link">Read More</a>
 						</article>
@@ -218,7 +248,9 @@
 								<p class="card__topTitle card__topTitle--date">18<br>May</p>
 								<h3 class="card__title">Those Other University Expenses You Aren't Thinking About</h3>
 							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti libero iste vel quo, sunt ratione, ex aut eius repellendus eum voluptatum minus fuga error.</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti libero iste vel quo, sunt ratione, ex aut eius repellendus eum voluptatum minus fuga error.
+							</p>
 
 							<a href="#" class="more_info_link">Read More</a>
 						</article>
@@ -230,7 +262,9 @@
 								<p class="card__topTitle card__topTitle--date">18<br>May</p>
 								<h3 class="card__title">Those Other University Expenses You Aren't Thinking About</h3>
 							</header>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti libero iste vel quo, sunt ratione, ex aut eius repellendus eum voluptatum minus fuga error.</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti libero iste vel quo, sunt ratione, ex aut eius repellendus eum voluptatum minus fuga error.
+							</p>
 
 							<a href="#" class="more_info_link">Read More</a>	
 						</article>
@@ -262,12 +296,15 @@
 							<ul class="socialMediaIcons">
 								<li class="socialMediaIcons__item">
 									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<p class="visuallyHidden">Facebook</p>
 								</li>
 								<li class="socialMediaIcons__item">
 									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<p class="visuallyHidden">Twitter</p>
 								</li>
 								<li class="socialMediaIcons__item">
 									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+									<p class="visuallyHidden">LinkedIn</p>
 								</li>
 							</ul>
 						</article>
@@ -283,12 +320,15 @@
 							<ul class="socialMediaIcons">
 								<li class="socialMediaIcons__item">
 									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<p class="visuallyHidden">Facebook</p>
 								</li>
 								<li class="socialMediaIcons__item">
 									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<p class="visuallyHidden">Twitter</p>
 								</li>
 								<li class="socialMediaIcons__item">
 									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+									<p class="visuallyHidden">LinkedIn</p>
 								</li>
 							</ul>
 						</article>
@@ -304,12 +344,15 @@
 							<ul class="socialMediaIcons">
 								<li class="socialMediaIcons__item">
 									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<p class="visuallyHidden">Facebook</p>
 								</li>
 								<li class="socialMediaIcons__item">
 									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<p class="visuallyHidden">Twitter</p>
 								</li>
 								<li class="socialMediaIcons__item">
 									<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+									<p class="visuallyHidden">LinkedIn</p>
 								</li>
 							</ul>
 						</article>
@@ -337,29 +380,91 @@
 								</div>
 							</header>
 
-							<ul>
-								
+							<ul class="card__description">
+								<li>One day trial</li>
+								<li>Limited Courses</li>
+								<li>3 Free Lessons</li>
+								<li>No Supporter</li>
+								<li>No Ebook</li>
+								<li>No Tutorial</li>
+								<li>Limited Registered User</li>
 							</ul>
 
-						<a href="#" class="button">Choose Plan</a>
+							<a href="#" class="button">Choose Plan</a>
 						</article>
 					</li>
-					<li class="cards__item"><article class="card card--plan"></article></li>
-					<li class="cards__item"><article class="card card--plan"></article></li>
+					<li class="cards__item">
+						<article class="card card--plan card--highlight">
+							<header class="header header--card">
+								<h3 class="card__title">Standard</h3>
+								<div class="card__subTitle card__subTitle--price">
+									<p>$288</p>
+									<p>30 Days</p>
+								</div>
+							</header>
+
+							<ul class="card__description">
+								<li>One Year Standard Access</li>
+								<li>Lorem ipsum.</li>
+								<li>Lorem ipsum dolor.</li>
+								<li>Lorem ipsum.</li>
+								<li>Lorem ipsum dolor.</li>
+								<li>Lorem ipsum dolor sit.</li>
+								<li>Lorem ipsum.</li>
+							</ul>
+
+							<a href="#" class="button">Choose Plan</a>
+						</article>
+					</li>
+					<li class="cards__item">
+						<article class="card card--plan">
+							<header class="header header--card">
+								<h3 class="card__title">Premium</h3>
+								<div class="card__subTitle card__subTitle--price">
+									<p>$139</p>
+									<p>30 Days</p>
+								</div>
+							</header>
+
+							<ul class="card__description">
+								<li>Lorem ipsum dolor.</li>
+								<li>Lorem ipsum.</li>
+								<li>Lorem ipsum.</li>
+								<li>Lorem ipsum dolor sit.</li>
+								<li>Lorem ipsum.</li>
+								<li>Lorem ipsum dolor.</li>
+								<li>Lorem ipsum.</li>
+							</ul>
+
+							<a href="#" class="button">Choose Plan</a>
+						</article>
+					</li>
 				</ul>
 			</div>
 		</section>
 <!-- ##our_testamonial## -->
 		<section>
 			<header class="header">
-				<h2 class="header__title">Our Testemonial</h2>
+				<h2 class="header__title">Our Testimonials</h2>
 			</header>
 
 			<div class="slideShow">
 				<div class="cards">
 					<ul class="cards__items">
-						<li class="cards__item"><article class="card card--testimonial"></article></li>
-						<li class="cards__item"><article class="card card--testimonial"></article></li>
+						<li class="cards__item">
+							<article class="card card--testimonial">
+								<img src="http://unsplash.it/173/151">
+								<p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
+								<p><span class="card__author">Maria Lehm</span> - Happy Student</p>
+							</article>
+						</li>
+						<li class="cards__item">
+							<article class="card card--testimonial">
+								<img src="http://unsplash.it/173/151">
+								<p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
+								<p><span class="card__author">Maria Lehm</span> - Happy Student</p>
+							</article>
+						</li>
 					</ul>
 				</div>
 				<div class="slideShow__indicator"></div>
@@ -382,49 +487,40 @@
 				
 				<ul class="gallery__items">
 					<li class="gallery__item enlargeable_image">
-						<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
+							<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
 							<div class="enlargeable_image__overlay"></div>
-						</div>
 					</li>
 					<li class="gallery__item enlargeable_image">
 						<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
-							<div class="enlargeable_image__overlay"></div>
-						</div>
+						<div class="enlargeable_image__overlay"></div>
 					</li>
 					<li class="gallery__item enlargeable_image">
 						<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
-							<div class="enlargeable_image__overlay"></div>
-						</div>
+						<div class="enlargeable_image__overlay"></div>
 					</li>
 					<li class="gallery__item enlargeable_image">
 						<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
-							<div class="enlargeable_image__overlay"></div>
-						</div>
+						<div class="enlargeable_image__overlay"></div>
 					</li>
 					<li class="gallery__item enlargeable_image">
 						<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
-							<div class="enlargeable_image__overlay"></div>
-						</div>
+						<div class="enlargeable_image__overlay"></div>
 					</li>
 					<li class="gallery__item enlargeable_image">
 						<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
-							<div class="enlargeable_image__overlay"></div>
-						</div>
+						<div class="enlargeable_image__overlay"></div>
 					</li>
 					<li class="gallery__item enlargeable_image">
 						<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
-							<div class="enlargeable_image__overlay"></div>
-						</div>
+						<div class="enlargeable_image__overlay"></div>
 					</li>
 					<li class="gallery__item enlargeable_image">
 						<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
-							<div class="enlargeable_image__overlay"></div>
-						</div>
+						<div class="enlargeable_image__overlay"></div>
 					</li>
 					<li class="gallery__item enlargeable_image">
 						<img src="http://unsplash.it/389/300" class="enlargeable_image__image">
-							<div class="enlargeable_image__overlay"></div>
-						</div>
+						<div class="enlargeable_image__overlay"></div>
 					</li>		
 				</ul>
 
@@ -434,12 +530,16 @@
 		</section>
 <!-- ##contact## -->
 		<section>
+			<header class="header visuallyHidden">
+				<h2 class="header__title">Contact</h2>
+			</header>
 			<section class="subSection subSection--highlight">
 				<header class="subSection__header">
 					<h3>Subscribe Weekly Newsletter</h3>
 				</header>
 				<form class="singleInputForm">
-					<input type="text" name="email" class="singleInputForm__input">
+					<label for="subscriptionEmail" class="visuallyHidden">Subscription Email</label>
+					<input type="text" name="email" class="singleInputForm__input" id="subscriptionEmail">
 					<button type="submit" class="singleInputForm__submit button button--form">Submit</button>
 				</form>
 			</section>
@@ -448,11 +548,15 @@
 					<h3 class="subSection__title">Get In Touch</h3>
 				</header>
 				<form>
-					<input type="text" name="name">
-					<input type="text" name="email">
-					<input type="text" name="subject">
-					<textarea>type your message...</textarea>
-					<button type="submit" class="button button--form"></button>
+					<label for="name" class="visuallyHidden">Name</label>
+					<input type="text" name="name" id="name" placeholder="Name*" required>
+					<label for="email" class="visuallyHidden">E-mail</label>
+					<input type="text" name="email" placeholder="E-Mail*" required>
+					<label for="email" class="visuallyHidden">Subject</label>
+					<input type="text" name="subject" placeholder="Subject*" required>
+					<label for="message" class="visuallyHidden">Message</label>
+					<textarea id="message" placeholder="type you message..."></textarea>
+					<button type="submit" class="button button--form">Send Message</button>
 				</form>
 			</section>
 			<section class="subSection">
@@ -492,7 +596,7 @@
 		</address>
 		<nav>
 			<div class="navList">
-				<h3 class="navList__heading"></h3>
+				<h3 class="navList__heading">Courses</h3>
 				<ul class="navList__list">
 					<li class="navList__item"><a href="#">Application Design</a></li>
 					<li class="navList__item"><a href="#">Multimedia & Graphic</a></li>
@@ -503,7 +607,7 @@
 				</ul>
 			</div>
 			<div class="navList">
-				<h3 class="navList__heading"></h3>
+				<h3 class="navList__heading">Quick Link</h3>
 				<ul class="navList__list">
 					<li class="navList__item"><a href="#">Home</a></li>
 					<li class="navList__item"><a href="#">About</a></li>
@@ -515,7 +619,7 @@
 			</div>
 
 			<div class="navList">
-				<h3 class="navList__heading"></h3>
+				<h3 class="navList__heading">Quick Link</h3>
 				<ul class="navList__list">
 					<li class="navList__item"><a href="#">Pricing</a></li>
 					<li class="navList__item"><a href="#">Testimonial</a></li>
@@ -526,7 +630,7 @@
 			</div>
 
 			<div class="navList navList">
-				<h3 class="navList__heading"></h3>
+				<h3 class="navList__heading">Recent Post</h3>
 				<ul class="navList__list">
 					<li class="navList__item navList__item--article">
 						<article>
