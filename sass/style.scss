@@ -1,0 +1,57 @@
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/functions';
+@import 'partials/mixins';
+@import 'partials/base';
+@import 'partials/header';
+
+
+.topHeadline {
+	display: flex;
+	justify-content: space-between;
+
+	&__announcement {
+		width: percentToWrapper(256px);
+	}
+}
+	
+.contactInfo--topHeadline {
+	display: flex;
+	justify-content: space-between;
+
+	width: percentToWrapper(378px);
+}
+
+.socialMediaIcons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navBar {
+	display: flex;
+	justify-content: space-between;
+	
+	&__items { //TODO: get the wrap alignment correct
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		width: percentToWrapper(848px);
+	}
+
+	&__item {
+		display: inline-block;
+
+		text-align: center;
+	}
+}
+
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	min-height: 830px;
+	
+	background-color: grey;
+}
