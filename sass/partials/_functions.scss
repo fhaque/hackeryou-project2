@@ -1,4 +1,4 @@
 //TODO: make it depend on base fontsize
-@function percentToWrapper($value) {
-	@return ($value / 1170px) * 100%;
+@function percentOfWrapper($value) {
+	@return ($value / $wrapperWidth) * 100%;
 }

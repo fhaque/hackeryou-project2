@@ -1,3 +1,11 @@
 .header {
 	text-align: center;
+
+	&--card {
+		text-align: left;
+	}
+
+	&--article {
+		text-align: left;
+	}
 }

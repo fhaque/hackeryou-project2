@@ -9,9 +9,11 @@
 .topHeadline {
 	display: flex;
 	justify-content: space-between;
+	align-items: baseline;
+	align-content: center;
 
 	&__announcement {
-		width: percentToWrapper(256px);
+		width: percentOfWrapper(256px);
 	}
 }
 	
@@ -19,29 +21,34 @@
 	display: flex;
 	justify-content: space-between;
 
-	width: percentToWrapper(378px);
+	width: percentOfWrapper(378px);
 }
 
 .socialMediaIcons {
 	display: flex;
 	justify-content: space-between;
+
+	&--teacher {
+		// width: 50%;
+	}
 }
 
 .navBar {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	
 	&__items { //TODO: get the wrap alignment correct
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 
-		width: percentToWrapper(848px);
+		width: percentOfWrapper(848px);
 	}
 
 	&__item {
-		display: inline-block;
-
+		display: block;
+		
 		text-align: center;
 	}
 }
@@ -55,3 +62,194 @@
 	
 	background-color: grey;
 }
+
+.article--2col {
+	display: flex;
+	flex-wrap: nowrap;
+
+	&__col1,
+	&__col2 {
+		width: 50%;
+
+		img {
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		&--centerContent {
+			display: flex;
+			align-items: flex-start;
+			align-content: space-between;
+			flex-wrap: wrap;
+
+			p {
+				flex: 0 0 100%;
+			}
+		}
+	}
+}
+
+.cards {
+	&__items {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.card {
+	img {
+		display: block;
+		width: 100%;
+
+		margin: 0 auto;
+	}
+
+	&__subTitle {
+		&--price {
+			text-align: center;
+		}
+	}
+
+	&--service {
+		text-align: center;
+
+		&__title {
+			text-align: center;
+		}
+
+	}
+
+	&--teacher {
+		&__contact {
+			display: flex;
+		}
+
+		&__contact * {
+			flex: 1;
+		}
+	}
+
+	&--course {
+		.button {
+			text-align: left;
+		}
+	}
+
+	&--plan {
+		&__title {
+			text-align: center;
+		}
+	}
+}
+
+a.card {
+	display: block;
+
+	padding: 0;
+	margin: 0;
+}
+
+.gallery {
+	img {
+		display: block;
+	}
+	&__items {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	&__item {
+		width: 33.33%;
+	}
+}
+
+.subSection {
+	&--subscribe {
+		display: flex;
+		justify-content: space-between;
+
+		& > * {
+			width: 50%;
+		}
+	}
+}
+
+.singleInputForm {
+	display: flex;
+	justify-content: flex-start;
+
+	&__input {
+		display: block;
+
+		margin: 0;
+		padding: 0;
+	}
+
+	&__submit {
+		margin: 0;
+	}
+}
+
+.contactForm {
+	display: flex;
+	flex-wrap: wrap;
+
+	text-align: left;
+
+	input {
+		display: box;
+		width: 100%;
+
+		&[name="name"],
+		 &[name="email"] {
+			width: 50%;
+		}
+	}
+	textarea {
+		width: 100%;
+	}
+}
+
+footer {
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		.navList {
+			width: 25%;
+		}
+	}
+
+}
+
+.addressList {
+	&--footer {
+		display: flex;
+		justify-content: center;
+		
+		&__item {
+			display: block;
+		}
+	}
+}
+
+.navList {
+	&__item {
+		&--article {
+			@include clearFix();
+			img {
+				display: block;
+				float:left;
+
+				width: 50%;
+			}
+		}
+	}
+	
+}
+
+

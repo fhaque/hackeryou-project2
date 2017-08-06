@@ -9,18 +9,6 @@
 		* {
 			border: 1px solid red;
 		}
-
-		.visuallyHidden {
-            position: absolute;
-            clip: rect(1px 1px 1px 1px); 
-            clip: rect(1px, 1px, 1px, 1px);
-            clip-path: inset(50%);
-            padding: 0;
-            border: 0;
-            height: 1px;
-            width: 1px;
-            overflow: hidden;
-        }
 	</style>
 </head>
 <body>
@@ -85,36 +73,40 @@
 				<header class="header header--section">
 					<h2 class="header__title">About Us</h2>
 				</header>
-				<article>
-					<header class="header header--article">
-						<h3 class="header__title">Why we are better</h3>
-					</header>
-					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sint magnam itaque cum atque ex omnis quos impedit quidem suscipit.</p>
-			
-					<div class="detailsContainer">
-						<details>
-							<summary>Lorem ipsum dolor.</summary>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
-						</details>
+				<article class="article article--2col">
+					<div class="article__col article--2col__col1">
+						<header class="header header--article">
+							<h3 class="header__title">Why we are better</h3>
+						</header>
 						
-						<details>
-							<summary>Lorem ipsum dolor.</summary>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
-						</details>
-						
-						<details>
-							<summary>Lorem ipsum dolor.</summary>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
-						</details>
-						
-						<details>
-							<summary>Lorem ipsum dolor.</summary>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
-						</details>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sint magnam itaque cum atque ex omnis quos impedit quidem suscipit.</p>
+									
+						<div class="detailsContainer">
+							<details>
+								<summary>Lorem ipsum dolor.</summary>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
+							</details>
+							
+							<details>
+								<summary>Lorem ipsum dolor.</summary>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
+							</details>
+							
+							<details>
+								<summary>Lorem ipsum dolor.</summary>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
+							</details>
+							
+							<details>
+								<summary>Lorem ipsum dolor.</summary>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quasi eligendi, quos soluta, tempora ab.</p>
+							</details>
+						</div>
 					</div>
 			
-					<img src="http://unsplash.it/602/504">
+					<div class="article__col article--2col__col2">
+						<img src="http://unsplash.it/602/504">
+					</div>
 				</article>
 		</div>
 		</section>
@@ -133,7 +125,7 @@
 							<a href="#" class="card card--service">
 								<img src="http://unsplash.it/150/134">
 								<header class="header header--card">
-									<p class="card__title">Course Management</p>
+									<h3 class="card__title card--service__title">Course Management</h3>
 								</header>
 								<p  class="card__description">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
@@ -144,7 +136,7 @@
 							<a href="#" class="card card--service">
 								<img src="http://unsplash.it/150/134">
 								<header class="header header--card">
-									<p class="card__title">Update My Information</p>
+									<h3 class="card__title card--service__title">Update My Information</h3>
 								</header>
 								<p class="card__description">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
@@ -155,7 +147,7 @@
 							<a href="#" class="card card--service">
 								<img src="http://unsplash.it/150/134">
 								<header class="header header--card">
-									<p class="card__title">Books and Library</p>
+									<h3 class="card__title card--service__title">Books and Library</h3>
 								</header>
 								<p class="card__description">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
@@ -303,21 +295,23 @@
 									<h3 class="card__title">Louis Lehman</h3>
 									<p class="card__subTitle">IT Expert & Teacher</p>
 								</header>
-								<p>Stay Connected</p>
-								<ul class="socialMediaIcons">
-									<li class="socialMediaIcons__item">
-										<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-										<p class="visuallyHidden">Facebook</p>
-									</li>
-									<li class="socialMediaIcons__item">
-										<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-										<p class="visuallyHidden">Twitter</p>
-									</li>
-									<li class="socialMediaIcons__item">
-										<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-										<p class="visuallyHidden">LinkedIn</p>
-									</li>
-								</ul>
+								<div class="card--teacher__contact">
+									<p>Stay Connected</p>
+									<ul class="socialMediaIcons socialMediaIcons--teacher">
+										<li class="socialMediaIcons__item">
+											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+											<p class="visuallyHidden">Facebook</p>
+										</li>
+										<li class="socialMediaIcons__item">
+											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+											<p class="visuallyHidden">Twitter</p>
+										</li>
+										<li class="socialMediaIcons__item">
+											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+											<p class="visuallyHidden">LinkedIn</p>
+										</li>
+									</ul>
+								</div>
 							</article>
 						</li>
 						<li class="cards__item">
@@ -327,21 +321,23 @@
 									<h3 class="card__title">Jemery Remerk</h3>
 									<p class="card__subTitle">Multi Teacher</p>
 								</header>
-								<p>Stay Connected</p>
-								<ul class="socialMediaIcons">
-									<li class="socialMediaIcons__item">
-										<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-										<p class="visuallyHidden">Facebook</p>
-									</li>
-									<li class="socialMediaIcons__item">
-										<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-										<p class="visuallyHidden">Twitter</p>
-									</li>
-									<li class="socialMediaIcons__item">
-										<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-										<p class="visuallyHidden">LinkedIn</p>
-									</li>
-								</ul>
+								<div class="card--teacher__contact">
+									<p>Stay Connected</p>
+									<ul class="socialMediaIcons socialMediaIcons--teacher">
+										<li class="socialMediaIcons__item">
+											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+											<p class="visuallyHidden">Facebook</p>
+										</li>
+										<li class="socialMediaIcons__item">
+											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+											<p class="visuallyHidden">Twitter</p>
+										</li>
+										<li class="socialMediaIcons__item">
+											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+											<p class="visuallyHidden">LinkedIn</p>
+										</li>
+									</ul>
+								</div>
 							</article>
 						</li>
 						<li class="cards__item">
@@ -351,21 +347,23 @@
 									<h3 class="card__title">Arnard Chesek</h3>
 									<p class="card__subTitle">Accounting & Teacher</p>
 								</header>
-								<p>Stay Connected</p>
-								<ul class="socialMediaIcons">
-									<li class="socialMediaIcons__item">
-										<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-										<p class="visuallyHidden">Facebook</p>
-									</li>
-									<li class="socialMediaIcons__item">
-										<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-										<p class="visuallyHidden">Twitter</p>
-									</li>
-									<li class="socialMediaIcons__item">
-										<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-										<p class="visuallyHidden">LinkedIn</p>
-									</li>
-								</ul>
+								<div class="card--teacher__contact">
+									<p>Stay Connected</p>
+									<ul class="socialMediaIcons socialMediaIcons--teacher">
+										<li class="socialMediaIcons__item ">
+											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+											<p class="visuallyHidden">Facebook</p>
+										</li>
+										<li class="socialMediaIcons__item">
+											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+											<p class="visuallyHidden">Twitter</p>
+										</li>
+										<li class="socialMediaIcons__item">
+											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+											<p class="visuallyHidden">LinkedIn</p>
+										</li>
+									</ul>
+								</div>
 							</article>
 						</li>
 					</ul>
@@ -386,7 +384,7 @@
 						<li class="cards__item">
 							<article class="card card--plan">
 								<header class="header header--card">
-									<h3 class="card__title">Trial</h3>
+									<h3 class="card__title card--plan__title">Trial</h3>
 									<div class="card__subTitle card__subTitle--price">
 										<p>Free</p>
 										<p>30 Days</p>
@@ -409,7 +407,7 @@
 						<li class="cards__item">
 							<article class="card card--plan card--highlight">
 								<header class="header header--card">
-									<h3 class="card__title">Standard</h3>
+									<h3 class="card__title card--plan__title">Standard</h3>
 									<div class="card__subTitle card__subTitle--price">
 										<p>$288</p>
 										<p>30 Days</p>
@@ -432,7 +430,7 @@
 						<li class="cards__item">
 							<article class="card card--plan">
 								<header class="header header--card">
-									<h3 class="card__title">Premium</h3>
+									<h3 class="card__title card--plan__title">Premium</h3>
 									<div class="card__subTitle card__subTitle--price">
 										<p>$139</p>
 										<p>30 Days</p>
@@ -467,17 +465,25 @@
 					<div class="cards">
 						<ul class="cards__items">
 							<li class="cards__item">
-								<article class="card card--testimonial">
-									<img src="http://unsplash.it/173/151">
-									<p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
-									<p><span class="card__author">Maria Lehm</span> - Happy Student</p>
+								<article class="card card--testimonial article--2col">
+									<div class="article--2col__col1">
+										<img src="http://unsplash.it/173/151">
+									</div>
+									<div class="article--2col__col2 article--2col__col2--centerContent">
+										<p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
+										<p class="card__author"><strong>Maria Lehm</strong> - Happy Student</p>
+									</div>
 								</article>
 							</li>
 							<li class="cards__item">
-								<article class="card card--testimonial">
-									<img src="http://unsplash.it/173/151">
-									<p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
-									<p><span class="card__author">Maria Lehm</span> - Happy Student</p>
+								<article class="card card--testimonial article--2col">
+									<div class="article--2col__col1">
+										<img src="http://unsplash.it/173/151">
+									</div>
+									<div class="article--2col__col2 article--2col__col2--centerContent">
+										<p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
+										<p class="card__author"> <strong>Maria Lehm</strong> - Happy Student</p>
+									</div>
 								</article>
 							</li>
 						</ul>
@@ -495,7 +501,7 @@
 				</header>
 				
 				<div class="gallery">
-					<div class="gallery__filterButtons">
+					<div class="buttons gallery__filterButtons">
 						<button class="gallery__filterButton button">All</button>
 						<button class="gallery__filterButton button">Photo</button>
 						<button class="gallery__filterButton button">Campus</button>
@@ -550,7 +556,7 @@
 				<header class="header visuallyHidden">
 					<h2 class="header__title">Contact</h2>
 				</header>
-				<section class="subSection subSection--highlight">
+				<section class="subSection subSection--highlight subSection--subscribe">
 					<header class="subSection__header">
 						<h3>Subscribe Weekly Newsletter</h3>
 					</header>
@@ -560,44 +566,46 @@
 						<button type="submit" class="singleInputForm__submit button button--form">Submit</button>
 					</form>
 				</section>
-				<section class="subSection">
-					<header class="subSection__header">
-						<h3 class="subSection__title">Get In Touch</h3>
-					</header>
-					<form>
-						<label for="name" class="visuallyHidden">Name</label>
-						<input type="text" name="name" id="name" placeholder="Name*" required>
-						<label for="email" class="visuallyHidden">E-mail</label>
-						<input type="text" name="email" placeholder="E-Mail*" required>
-						<label for="email" class="visuallyHidden">Subject</label>
-						<input type="text" name="subject" placeholder="Subject*" required>
-						<label for="message" class="visuallyHidden">Message</label>
-						<textarea id="message" placeholder="type you message..."></textarea>
-						<button type="submit" class="button button--form">Send Message</button>
-					</form>
-				</section>
-				<section class="subSection">
-					<header class="subSection__header">
-						<h3 class="subSection__title">Address</h3>
-					</header>
-					<ul class="addressList addressList--large">
-						<li class="addressList__item addressList__item--location">
-							<p>Lorem ipsum dolor sit.<br>
-								Lorem ipsum dolor sit.
-							</p>
-						</li>
-						<li class="addressList__item addressList__item--phone">
-							<p>Lorem ipsum dolor sit.<br>
-								Lorem ipsum dolor sit.
-							</p>
-						</li>
-						<li class="addressList__item addressList__item--email">
-							<p>Lorem ipsum dolor sit.<br>
-								Lorem ipsum dolor sit.
-							</p>
-						</li>
-					</ul>
-				</section>
+				<div class="article--2col">
+					<section class="subSection article--2col__col1">
+						<header class="subSection__header">
+							<h3 class="subSection__title">Get In Touch</h3>
+						</header>
+						<form class="contactForm">
+							<label for="name" class="visuallyHidden">Name</label>
+							<input type="text" name="name" id="name" placeholder="Name*" required>
+							<label for="email" class="visuallyHidden">E-mail</label>
+							<input type="text" name="email" placeholder="E-Mail*" required>
+							<label for="email" class="visuallyHidden">Subject</label>
+							<input type="text" name="subject" placeholder="Subject*" required>
+							<label for="message" class="visuallyHidden">Message</label>
+							<textarea id="message" placeholder="type you message..."></textarea>
+							<button type="submit" class="button button--form">Send Message</button>
+						</form>
+					</section>
+					<section class="subSection article--2col__col2">
+						<header class="subSection__header">
+							<h3 class="subSection__title">Address</h3>
+						</header>
+						<ul class="addressList addressList--large">
+							<li class="addressList__item addressList__item--location">
+								<p>Lorem ipsum dolor sit.<br>
+									Lorem ipsum dolor sit.
+								</p>
+							</li>
+							<li class="addressList__item addressList__item--phone">
+								<p>Lorem ipsum dolor sit.<br>
+									Lorem ipsum dolor sit.
+								</p>
+							</li>
+							<li class="addressList__item addressList__item--email">
+								<p>Lorem ipsum dolor sit.<br>
+									Lorem ipsum dolor sit.
+								</p>
+							</li>
+						</ul>
+					</section>
+				</div>
 			</div>
 		</section>
 	</main>
@@ -607,9 +615,9 @@
 			<address class="contactInfo">
 				<h1>Univers</h1>
 				<ul class="addressList addressList--footer">
-					<li class="addressList__item addressList__item--hotline">Lorem ipsum dolor sit amet.</li>
-					<li class="addressList__item addressList__item--email">Lorem ipsum.</li>
-					<li class="addressList__item addressList__item--location">Lorem ipsum dolor sit amet.</li>
+					<li class="addressList__item addressList--footer__item addressList__item--hotline">Lorem ipsum dolor sit amet.</li>
+					<li class="addressList__item addressList--footer__item addressList__item--footer addressList__item--email">Lorem ipsum.</li>
+					<li class="addressList__item addressList--footer__item addressList__item--location">Lorem ipsum dolor sit amet.</li>
 				</ul>
 			</address>
 			<nav>
