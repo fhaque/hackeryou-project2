@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: remCalc(35px);
+	text-transform: uppercase;
 }
 
 p {
@@ -36,6 +37,14 @@ ul, ol {
 
 a, a:visited {
 	text-decoration: none;
+}
+
+section {
+	padding: remCalc(125px) 0;
+}
+
+.tintedBackground {
+	background-color: $primaryColorThree;
 }
 
 .wrapper {
@@ -68,6 +77,8 @@ a, a:visited {
 .button {
 	display: block;
 	flex: 1;
+
+	width: percentOfWrapper(240px);
 
 	padding: remCalc(24px);
 	margin: 0 auto;

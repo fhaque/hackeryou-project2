@@ -12,18 +12,39 @@
 		&__topTitle {
 			color: $secondaryColorTwo;
 			font-size: remCalc(28px);
+			text-transform: capitalize;
 		}
 		&__title {
+			position: relative;
+
 			color: $secondaryColorTwo;
 			font-size: remCalc(55px);
+
+			margin-top: remCalc(48px);
+			margin-bottom: remCalc(26px);
+
+			&::before {
+				position: absolute;
+				top: remCalc(-26px);
+				left: 50%;
+				transform: translateX(-50%);
+
+				content: "";
+				width: remCalc(152px);
+				height: 1px;
+				background-color: $secondaryColorTwo;
+			}
 		}
 		&__caption {
 			color: $secondaryColorTwo;
 			font-size: remCalc(20px);
+			text-transform: capitalize;
+
+			margin-bottom: remCalc(66px);
 		}
 
 		.button {
-			
+
 			width: remCalc(244px);
 			color: $secondaryColorTwo;
 			border-color: $secondaryColorTwo;
@@ -32,6 +53,8 @@
 	}
 
 	&--section {
+		margin-bottom: remCalc(60px);
+
 		&__title {
 			font-size: remCalc(36px);
 			text-transform: uppercase;
@@ -44,14 +67,21 @@
 		}
 
 		&__subTitle {
+			margin-top: remCalc(26px);
+
 			font-weight: $normalWeight;
 			color: $secondaryColorOne;
 			font-size: remCalc(20px);
 		}
 
 		&__caption {
+			width: percentOfWrapper(686px);
+			margin: 0 auto;
+			margin-top: remCalc(26px);
+
 			@include font('text', 400);
 			font-size: remCalc(14px);
+			line-height: remCalc(30px);
 		}
 	}
 
@@ -78,6 +108,8 @@
 
 	&--article {
 		text-align: left;
+
+		margin-bottom: remCalc(40px);
 
 		&__title {
 			font-size: remCalc(30px);

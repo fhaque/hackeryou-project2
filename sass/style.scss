@@ -12,6 +12,8 @@
 	align-items: baseline;
 	align-content: center;
 
+	padding: remCalc(32px) 0;
+
 	&__announcement {
 		width: percentOfWrapper(256px);
 		min-width: remCalc(256px);
@@ -20,6 +22,10 @@
 		font-size: remCalc(14px);
 		color: $primaryColorTwo;
 	}
+}
+
+.crossPageBorder {
+	border-bottom: 1px solid $headlineBorderColor;
 }
 
 .contactInfo {
@@ -50,6 +56,10 @@
 
 	}
 
+	&--topHeadline {
+		width: remCalc(70px);
+	}
+
 	&--teacher {
 		&__icon {
 			color: $primaryColorTwo;
@@ -62,6 +72,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	padding: remCalc(32px) 0;
 	
 	&__items { //TODO: get the wrap alignment correct
 		display: flex;
@@ -100,6 +112,7 @@
 	background-color: grey;
 }
 
+
 .article--2col {
 	display: flex;
 	flex-wrap: nowrap;
@@ -127,12 +140,37 @@
 	}
 }
 
+.article--about {
+	justify-content: space-between;
+
+	& > * {
+		width: 50% - percentOfWrapper(65px / 2);
+	}
+}
+
 .detailsContainer {
+	margin-top: remCalc(25px);
+
 	details[open] {
+		border: 1px solid $detailsBorderColor;
+		border-top: none;
+		
+		margin-bottom: remCalc(28px);
+
+		p {
+			margin: remCalc(22px) remCalc(14px);
+			line-height: remCalc(24px);
+		}
+
 		summary {
+			margin: 0;
+
 			font-size: remCalc(18px);
 			color: $secondaryColorTwo;
 			background-color: $secondaryColorOne;
+
+			border: none;
+			box-shadow: none;
 
 			&::before {
 			font-family: FontAwesome;
@@ -142,14 +180,24 @@
 	}
 
 	summary {
+		padding: remCalc(20px);
+		margin-bottom: remCalc(28px);
+
 		@include font('normal');
 		font-size: remCalc(14px);
+		color: $primaryColorTwo;
+
+		
+		box-shadow: 0px 0px 7.92px 0.08px rgba(0, 0, 0, 0.1);
 
 		&::-webkit-details-marker {
   			display: none
 		}
 
 		&::before {
+			margin-left: remCalc(16px);
+			margin-right: remCalc(8px);
+
 			font-family: FontAwesome;
 			content: '\f067';
 		}
@@ -161,11 +209,25 @@
 .cards {
 	&__items {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
+	}
+
+	&__item {
+		width: (100%  - 2 * percentOfWrapper(50px)) / 3;
+	}
+
+	.buttons {
+		margin-top: remCalc(74px);
+	}
+
+	& > .button {
+		margin-top: remCalc(74px);
 	}
 }
 
 .card {
+	background-color: $secondaryColorTwo;
+
 	img {
 		display: block;
 		width: 100%;
@@ -205,8 +267,16 @@
 	&--service {
 		text-align: center;
 
+		// min-height: remCalc(261px);
+
 		&__title {
 			text-align: center;
+			margin-bottom: remCalc(30px);
+		}
+
+		img {
+			width: 42%;
+			margin-bottom: remCalc(50px);
 		}
 
 	}
@@ -259,10 +329,39 @@
 	}
 
 	&--course {
+		box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
+
+		&__topTitle {
+			margin-bottom: remCalc(18px);
+			&::before {
+				margin-right: remCalc(9px);
+
+				content: "\f073";
+				font-family: FontAwesome;
+				font-size: remCalc(10px);
+				font-weight: $normalWeight;
+			}
+		}
+
+		&__title {
+			margin-bottom: remCalc(22px);
+
+			@include font('text', 400);
+			color: $primaryColorOne;
+			font-size: remCalc(14px);
+		}
+
+		&__content {
+			padding: remCalc(30px);
+		}
+
 		&__description {
 			font-size: remCalc(10px);
 			line-height: remCalc(18px);
+
+			margin-bottom: remCalc(17px);
 		}
+
 		.button {
 			margin: 0;
 
