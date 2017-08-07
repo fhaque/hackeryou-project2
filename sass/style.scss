@@ -225,16 +225,41 @@
 	}
 
 	&__item {
+		// min-width: remCalc(358px);
 		width: (100%  - 2 * percentOfWrapper(50px)) / 3;
+		flex-shrink: 0;
+
 
 		@include respond-to("medium") {
 			width: 100%;
 		}
 	}
 
+	&--teacher {
+		@include respond-to("medium") {
+			&__items {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				margin: 0;
+			}
+
+			&__item {
+				max-width: 48%;
+				margin: 1%;
+			}
+		}	
+	}
+
 	&--testimonial {
 		&__item {
 			width: 50% - percentOfWrapper(20px);
+
+			@include respond-to("medium") {
+				width: 100%;
+			}
 		}
 	}
 
@@ -410,6 +435,13 @@
 	}
 
 	&--teacher {
+		@include respond-to("medium") {
+			position: relative;
+			
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
 
 		&__title {
 			margin-top: remCalc(40px);
@@ -417,6 +449,12 @@
 
 			font-size: remCalc(25px);
 			text-transform: uppercase;
+
+			@include respond-to("medium") {
+				margin-top: 10%;
+				color: $secondaryColorTwo;
+				text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+			}
 		}
 
 		&__subTitle {
@@ -426,6 +464,32 @@
 			font-size: remCalc(18px);
 			color: $secondaryColorOne;
 			background-color: transparent;
+
+			@include respond-to("medium") {
+				margin: 2% 0;
+				// color: $primaryColorOne;
+				text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+			}
+		}
+
+		&__content {
+			@include respond-to("medium") {
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+
+				width: 100%;
+				height: 40%;
+				padding: 2%;
+			
+				background-color: transparentize($primaryColorOne, 0.9);
+				// box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.7);
+
+				&:hover {
+					background-color: transparentize($primaryColorOne, 0.1);
+				}
+			}
 		}
 
 		&__contact {
@@ -435,15 +499,40 @@
 			width: 75%;
 
 			text-transform: uppercase;
+
+			@include respond-to("medium") {
+				width: 100%;
+			}
+
 			p:first-child {
 				flex-shrink: 0;
 				width: 70%;
 				font-size: remCalc(18px);
+
+				@include respond-to("medium") {
+					width: 60%;
+					color: $secondaryColorTwo;
+					text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+				}
 			}
 
 			.socialMediaIcons--teacher {
 				width: 30%;
 				flex: 1;
+				
+				@include respond-to("medium") {
+					width: 40%;
+					justify-content: space-between;
+				}
+
+			}
+			
+			.socialMediaIcons--teacher__icon {
+				@include respond-to("medium") {
+					color: $secondaryColorTwo;
+					font-size: remCalc(30px);
+					text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+				}
 			}
 		}
 	}
@@ -538,8 +627,26 @@
 	&--plan {
 		box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
 
+		@include respond-to("medium") {
+			position: relative;
+
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+
 		&--highlighted {
 			box-shadow: 0px 0px 28.13px 0.87px transparentize($secondaryColorOne, 0.5);
+		}
+
+		&__header {
+			@include respond-to("medium") {
+				width: 28%;
+				padding: 0;
+				margin:0;
+				margin-right: 2%;
+
+				border-right: 1px solid $detailsBorderColor;
+			}
 		}
 
 		&__title {
@@ -552,6 +659,10 @@
 		&__subTitle {
 			padding: remCalc(28px) 0;
 			box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.2);
+
+			@include respond-to("medium") {
+				box-shadow: 0;
+			}
 		}
 
 		&__priceAmount {
@@ -563,8 +674,22 @@
 			font-size: remCalc(24px);
 		}
 
+		&__descriptionContainer {
+			display: flex;
+			justify-content: center;
+
+			@include respond-to("medium") {
+				justify-content: flex-start;
+
+				padding: 0;
+				margin:0;
+				width: 70%;
+			}
+		}
+
 		&__description {
-			padding: remCalc(40px) remCalc(80px);
+			padding: remCalc(40px) 0;
+
 
 			@include font('text', 400);
 			font-size: remCalc(14px);
@@ -575,7 +700,13 @@
 				font-family: FontAwesome;
 				font-size: remCalc(14px);
 			}
-
+			
+			@include respond-to("medium") {
+				margin:0;
+				padding: 0;
+				padding-top: 2%;
+			}
+			
 		}
 
 		.button {
@@ -590,6 +721,10 @@
 			&:hover {
 				color: $secondaryColorOne;
 			}
+
+			@include respond-to("medium") {
+				// position: absolute;
+			}
 		}
 		
 	}
@@ -600,7 +735,7 @@
 		width: 100%;
 		padding: remCalc(36px) remCalc(26px);
 
-		z-index: $zIndexOne;
+		z-index: $zIndexTwo;
 
 		border: 1px solid $detailsBorderColor;
 
@@ -611,6 +746,12 @@
 
 		.article--2col__col2 {
 			width: calc(100% - 34% - 12px); //TODO: how to fix 12px into rem?
+
+			@include respond-to("medium") {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between; 
+			}
 		}
 
 		&__description {
@@ -622,7 +763,7 @@
 				top: 0%;
 				right: 0%;
 
-				z-index: $zIndexTwo;
+				z-index: $zIndexThree;
 
 				content: "";
 				color: $secondaryColorOne;
