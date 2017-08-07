@@ -218,10 +218,18 @@
 	&__items {
 		display: flex;
 		justify-content: space-between;
+
+		@include respond-to("medium") {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
 		width: (100%  - 2 * percentOfWrapper(50px)) / 3;
+
+		@include respond-to("medium") {
+			width: 100%;
+		}
 	}
 
 	&--testimonial {
@@ -241,6 +249,16 @@
 
 .card {
 	background-color: $secondaryColorTwo;
+
+	@include respond-to("medium") {
+		display: flex;
+		// flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+
+		margin-bottom: remCalc(20px);
+	}
 
 	img {
 		display: block;
@@ -266,6 +284,10 @@
 	&__description {
 		font-size: remCalc(14px);
 		line-height: remCalc(24px);
+
+		@include respond-to("medium") {
+			text-align: left;
+		}
 	}
 
 	&--highlighted {
@@ -280,17 +302,37 @@
 
 	&--service {
 		text-align: center;
-
-		// min-height: remCalc(261px);
-
+		
+	
 		&__title {
 			text-align: center;
 			margin-bottom: remCalc(30px);
+
+			@include respond-to("medium") {
+				text-align: left;
+				margin-bottom: remCalc(10px);
+			}
 		}
 
 		img {
 			width: 42%;
 			margin-bottom: remCalc(50px);
+
+			@include respond-to("medium") {
+				width: 30%;
+				margin: 0;
+				flex: 1;
+			}
+		}
+
+		.card__content {
+			@include respond-to("medium") {
+				min-width: 70%;
+				flex: 1;
+				margin: 0;
+				padding-top: 2%;
+				padding-left: 2%;
+			}
 		}
 
 	}
@@ -320,6 +362,10 @@
 				background-color: $secondaryColorOne;
 
 			}
+
+			@include respond-to("medium") {
+				left: 90%;
+			}
 		}
 
 		&__title {
@@ -329,10 +375,34 @@
 
 			font-size: remCalc(14px);
 			line-height: remCalc(16px);
+
+			@include respond-to("medium") {
+				margin-top: 0;
+			}
+		}
+
+		&__content {
+			@include respond-to("medium") {
+				position: absolute;
+				left: 50%;
+				bottom: 5%;
+				transform: translateX(-50%);
+
+				width: 100%;
+				max-height: 80%;
+				padding: 2%;
+			
+				background-color: transparentize($secondaryColorTwo, 0.1);
+				box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.7);
+
+				&:hover {
+					background-color: $secondaryColorTwo;
+				}
+			}
 		}
 
 		&__description {
-			width: 65%;
+			width: 80%;
 			margin-bottom: remCalc(16px) - remCalc(24px) / 2;
 			font-size: remCalc(12px);
 			line-height: remCalc(24px);
@@ -381,6 +451,10 @@
 	&--course {
 		box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
 
+		@include respond-to("medium") {
+			position: relative;
+		}
+
 		&__topTitle {
 			margin-bottom: remCalc(18px);
 			&::before {
@@ -399,10 +473,31 @@
 			@include font('text', 400);
 			color: $primaryColorOne;
 			font-size: remCalc(14px);
+
+			@include respond-to("medium") {
+				font-size: remCalc(16px);
+			}
 		}
 
 		&__content {
 			padding: remCalc(30px);
+
+			@include respond-to("medium") {
+				position: absolute;
+				width: 50%;
+				max-height: 100%;
+				top: 5%;
+				right: 5%;
+				bottom: 5%;
+
+				
+				background-color: transparentize($secondaryColorTwo, 0.1);
+				box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.7);
+
+				&:hover {
+					background-color: $secondaryColorTwo;
+				}
+			}
 		}
 
 		&__description {
@@ -410,6 +505,11 @@
 			line-height: remCalc(18px);
 
 			margin-bottom: remCalc(17px);
+	
+			@include respond-to("medium") {
+				font-size: remCalc(12px);
+				line-height: remCalc(20px);
+			}
 		}
 
 		.button {
@@ -420,6 +520,17 @@
 				content: "\f054";
 				font-family: FontAwesome;
 				font-size: remCalc(4px);
+			}
+
+			@include respond-to("medium") {
+				position: absolute;
+				bottom: 5%;
+				left: 50%;
+				transform: translateX(-50%);
+
+				width: 50%;
+
+				font-size: remCalc(12px);
 			}
 		}
 	}
@@ -538,6 +649,13 @@ a.card {
 
 	padding: 0;
 	margin: 0;
+
+	@include respond-to("medium") {
+		display: flex;
+		justify-content: space-between;
+
+		margin-bottom: remCalc(20px);
+	}
 }
 
 .gallery {
