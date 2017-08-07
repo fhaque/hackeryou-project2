@@ -16,3 +16,17 @@
     *zoom: 1;
   }
 }
+
+@mixin font($type: 'heading', $weight: $boldWeight, $style: normal) {
+  @if $type == 'heading' {
+    font-family: $headingFontFamily;
+    font-weight: $weight;
+    font-style: $style;
+    color: $primaryColorOne;
+  } @else if $type == 'text' {
+    font-family: $textFontFamily;
+    font-weight: $weight;
+    font-style: $style;
+    color: $primaryColorTwo;
+  }
+}

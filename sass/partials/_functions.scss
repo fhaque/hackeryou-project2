@@ -2,3 +2,7 @@
 @function percentOfWrapper($value) {
 	@return ($value / $wrapperWidth) * 100%;
 }
+
+@function remCalc($value) {
+	@return $value / $htmlFontSize * 1rem;
+}

@@ -6,9 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
-		* {
+		/** {
 			border: 1px solid red;
-		}
+		}*/
 	</style>
 </head>
 <body>
@@ -20,21 +20,21 @@
 				<div class="contactInfo contactInfo--topHeadline">
 					<p class="contactInfo__phone">0084-2365-56984</p>
 					<p class="contactInfo__email">info@university.com</p>
-					<ul class="contactInfo__socialMediaIcons socialMediaIcons">
+					<ul class="contactInfo__socialMediaIcons socialMediaIcons socialMediaIcons--topHeadline">
 						<li class="socialMediaIcons__item">
-							<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#" class="socialMediaIcons__icon socialMediaIcons__icon--topHeadline"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 							<p class="visuallyHidden">Facebook</p>
 						</li>
 						<li class="socialMediaIcons__item">
-							<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="#" class="socialMediaIcons__icon socialMediaIcons__icon--topHeadline"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 							<p class="visuallyHidden">Twitter</p>
 						</li>
 						<li class="socialMediaIcons__item">
-							<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+							<a href="#" class="socialMediaIcons__icon socialMediaIcons__icon--topHeadline"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 							<p class="visuallyHidden">LinkedIn</p>
 						</li>
 						<li class="socialMediaIcons__item">
-							<a href="#" class="socialMediaIcon__icon"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+							<a href="#" class="socialMediaIcons__icon socialMediaIcons__icon--topHeadline"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 							<p class="visuallyHidden">Youtube</p>
 						</li>
 					</ul>
@@ -55,15 +55,15 @@
 					<li class="navBar__item"><a class="navBar__link" href="#">Contact</a></li>
 				</ul>
 			</nav>
+		</div>
 			<div class="hero">
-				<div class="header header--hero">
-					<p class="header__topTitle">The Best Learning Institution</p>
-					<h2 class="header__title">Welcome to Our University</h2>
-					<p class="header__caption">We believer there is nothing more important than education</p>
+				<div class="header header--hero wrapper">
+					<p class="header__topTitle header--hero__topTitle">The Best Learning Institution</p>
+					<h2 class="header__title header--hero__title">Welcome to Our University</h2>
+					<p class="header__caption header--hero__caption">We believer there is nothing more important than education</p>
 					<a href="#" class="button">Read More</a>
 				</div>
 			</div>
-		</div>
 	</header>
 <!-- ##main## -->
 	<main>
@@ -71,12 +71,12 @@
 		<div class="wrapper">
 			<section>
 				<header class="header header--section">
-					<h2 class="header__title">About Us</h2>
+					<h2 class="header__title header--section__title">About Us</h2>
 				</header>
 				<article class="article article--2col">
 					<div class="article__col article--2col__col1">
 						<header class="header header--article">
-							<h3 class="header__title">Why we are better</h3>
+							<h3 class="header__title header--article__title">Why we are better</h3>
 						</header>
 						
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sint magnam itaque cum atque ex omnis quos impedit quidem suscipit.</p>
@@ -113,10 +113,10 @@
 <!-- ##education_services## -->
 		<section>
 			<div class="wrapper">
-				<header class="header">
-					<h2 class="header__title header__title--capitalize">Education Services</h2>
-					<p class="header__subTitle">Learn From Best Staff</p>
-					<p class="header__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse natus aperiam facilis, consectetur tenetur repellat, harum corporis unde quos eligendi similique optio sapiente earum impedit.</p>
+				<header class="header header--section">
+					<h2 class="header__title header--section__title">Education Services</h2>
+					<p class="header__subTitle header--section__subTitle">Learn From Best Staff</p>
+					<p class="header__caption header--section__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse natus aperiam facilis, consectetur tenetur repellat, harum corporis unde quos eligendi similique optio sapiente earum impedit.</p>
 				</header>
 				
 				<nav class="cards">
@@ -125,7 +125,7 @@
 							<a href="#" class="card card--service">
 								<img src="http://unsplash.it/150/134">
 								<header class="header header--card">
-									<h3 class="card__title card--service__title">Course Management</h3>
+									<h3 class="card__title card--service__title header--card__title">Course Management</h3>
 								</header>
 								<p  class="card__description">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
@@ -165,9 +165,9 @@
 <!-- ##our_featured_courses## -->
 		<section>
 			<div class="wrapper">
-				<header class="header">
-					<h2 class="header__title">Our Featured Courses</h2>
-					<p class="header__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, nisi.</p>
+				<header class="header header--section">
+					<h2 class="header__title header--section__title">Our Featured Courses</h2>
+					<p class="header__caption header--section__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, nisi.</p>
 				</header>
 				
 				<div class="cards">
@@ -176,10 +176,10 @@
 							<article class="card card--course">
 								<img src="http://unsplash.it/358/230">
 								<header class="header header--card">
-									<p class="card__topTitle card__topTitle--date">May 4, 2017</p>
-									<h3 class="card__title">Application Design</h3>
+									<p class="card__topTitle card__topTitle--date header--card__topTitle--date">May 4, 2017</p>
+									<h3 class="card__title header--card__title">Application Design</h3>
 								</header>
-								<p class="card__description">
+								<p class="card__description card--course__description">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
 								</p>
 				
@@ -190,10 +190,10 @@
 							<article class="card card--course">
 								<img src="http://unsplash.it/358/230">
 								<header class="header header--card">
-									<p class="card__topTitle card__topTitle--date">May 4, 2017</p>
-									<h3 class="card__title">Multimedia & Graphic</h3>
+									<p class="card__topTitle card__topTitle--date header--card__topTitle--date">May 4, 2017</p>
+									<h3 class="card__title header--card__title">Multimedia & Graphic</h3>
 								</header>
-								<p class="card__description">
+								<p class="card__description card--course__description">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
 								</p>
 				
@@ -204,10 +204,10 @@
 							<article class="card card--course">
 								<img src="http://unsplash.it/358/230">
 								<header class="header header--card">
-									<p class="card__topTitle card__topTitle--date">May 4, 2017</p>
-									<h3 class="card__title">Chemical Engineering</h3>
+									<p class="card__topTitle card__topTitle--date header--card__topTitle--date">May 4, 2017</p>
+									<h3 class="card__title header--card__title">Chemical Engineering</h3>
 								</header>
-								<p class="card__description">
+								<p class="card__description card--course__description">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum consequatur excepturi provident magnam.
 								</p>
 				
@@ -222,8 +222,8 @@
 <!-- ##latest_news## -->
 		<section>
 			<div class="wrapper">
-				<header class="header">
-					<h2 class="header__title">Latest News</h2>
+				<header class="header header--section">
+					<h2 class="header__title header--section__title">Latest News</h2>
 				</header>
 				
 				<div class="cards">
@@ -232,10 +232,10 @@
 							<article class="card card--news">
 								<img src="http://unsplash.it/358/230">
 								<header class="header header--card">
-									<p class="card__topTitle card__topTitle--date">18<br>May</p>
-									<h3 class="card__title">Those Other University Expenses You Aren't Thinking About</h3>
+									<p class="card__topTitle card--news__topTitle card__topTitle--date header--card__topTitle">18<br>May</p>
+									<h3 class="card__title card--news__title header--card__title">Those Other University Expenses You Aren't Thinking About</h3>
 								</header>
-								<p class="card__description">
+								<p class="card__description card--news__description">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas earum omnis sequi expedita ipsam illo amet mollitia, odit delectus fugit atque ex officiis consequatur.
 								</p>
 				
@@ -246,11 +246,11 @@
 							<article class="card card--news">
 								<img src="http://unsplash.it/358/230">
 								<header class="header header--card">
-									<p class="card__topTitle card__topTitle--date">18<br>May</p>
-									<h3 class="card__title">Those Other University Expenses You Aren't Thinking About</h3>
+									<p class="card__topTitle card--news__topTitle card__topTitle--date header--card__topTitle">18<br>May</p>
+									<h3 class="card__title card--news__title header--card__title">Those Other University Expenses You Aren't Thinking About</h3>
 								</header>
-								<p class="card__description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti libero iste vel quo, sunt ratione, ex aut eius repellendus eum voluptatum minus fuga error.
+								<p class="card__description card--news__description">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas earum omnis sequi expedita ipsam illo amet mollitia, odit delectus fugit atque ex officiis consequatur.
 								</p>
 				
 								<a href="#" class="more_info_link">Read More</a>
@@ -260,14 +260,14 @@
 							<article class="card card--news">
 								<img src="http://unsplash.it/358/230">
 								<header class="header header--card">
-									<p class="card__topTitle card__topTitle--date">18<br>May</p>
-									<h3 class="card__title">Those Other University Expenses You Aren't Thinking About</h3>
+									<p class="card__topTitle card--news__topTitle card__topTitle--date header--card__topTitle">18<br>May</p>
+									<h3 class="card__title card--news__title header--card__title">Those Other University Expenses You Aren't Thinking About</h3>
 								</header>
-								<p class="card__description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti libero iste vel quo, sunt ratione, ex aut eius repellendus eum voluptatum minus fuga error.
+								<p class="card__description card--news__description">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas earum omnis sequi expedita ipsam illo amet mollitia, odit delectus fugit atque ex officiis consequatur.
 								</p>
 				
-								<a href="#" class="more_info_link">Read More</a>	
+								<a href="#" class="more_info_link">Read More</a>
 							</article>
 						</li>
 					</ul>
@@ -281,9 +281,9 @@
 <!-- ##our_teacher## -->
 		<section>
 			<div class="wrapper">
-				<header class="header">
-					<h2 class="header__title">Our Teacher</h2>
-					<p class="header__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ducimus magni dolorem, ipsum rerum modi velit consectetur sequi, architecto harum fugiat asperiores fugit, nihil vero!</p>
+				<header class="header header--section">
+					<h2 class="header__title header--section__title">Our Teacher</h2>
+					<p class="header__caption header--section__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ducimus magni dolorem, ipsum rerum modi velit consectetur sequi, architecto harum fugiat asperiores fugit, nihil vero!</p>
 				</header>
 				
 				<div class="cards">
@@ -292,22 +292,22 @@
 							<article class="card card--teacher">
 								<img src="http://unsplash.it/358/412">
 								<header class="header header--card">
-									<h3 class="card__title">Louis Lehman</h3>
-									<p class="card__subTitle">IT Expert & Teacher</p>
+									<h3 class="card__title card--teacher__title">Louis Lehman</h3>
+									<p class="card__subTitle card--teacher__subTitle">IT Expert & Teacher</p>
 								</header>
 								<div class="card--teacher__contact">
 									<p>Stay Connected</p>
 									<ul class="socialMediaIcons socialMediaIcons--teacher">
-										<li class="socialMediaIcons__item">
-											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+										<li class="socialMediaIcons__item socialMediaIcons--teacher__item">
+											<a href="#" class="socialMediaIcons__icon socialMediaIcons--teacher__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 											<p class="visuallyHidden">Facebook</p>
 										</li>
-										<li class="socialMediaIcons__item">
-											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+										<li class="socialMediaIcons__item socialMediaIcons--teacher__item">
+											<a href="#" class="socialMediaIcons__icon socialMediaIcons--teacher__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 											<p class="visuallyHidden">Twitter</p>
 										</li>
-										<li class="socialMediaIcons__item">
-											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+										<li class="socialMediaIcons__item socialMediaIcons--teacher__item">
+											<a href="#" class="socialMediaIcons__icon socialMediaIcons--teacher__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 											<p class="visuallyHidden">LinkedIn</p>
 										</li>
 									</ul>
@@ -318,22 +318,22 @@
 							<article class="card card--teacher">
 								<img src="http://unsplash.it/358/412">
 								<header class="header header--card">
-									<h3 class="card__title">Jemery Remerk</h3>
-									<p class="card__subTitle">Multi Teacher</p>
+									<h3 class="card__title card--teacher__title">Jemery Remerk</h3>
+									<p class="card__subTitle card--teacher__subTitle">Multi Teacher</p>
 								</header>
 								<div class="card--teacher__contact">
 									<p>Stay Connected</p>
 									<ul class="socialMediaIcons socialMediaIcons--teacher">
-										<li class="socialMediaIcons__item">
-											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+										<li class="socialMediaIcons__item socialMediaIcons--teacher__item">
+											<a href="#" class="socialMediaIcons__icon socialMediaIcons--teacher__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 											<p class="visuallyHidden">Facebook</p>
 										</li>
-										<li class="socialMediaIcons__item">
-											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+										<li class="socialMediaIcons__item socialMediaIcons--teacher__item">
+											<a href="#" class="socialMediaIcons__icon socialMediaIcons--teacher__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 											<p class="visuallyHidden">Twitter</p>
 										</li>
-										<li class="socialMediaIcons__item">
-											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+										<li class="socialMediaIcons__item socialMediaIcons--teacher__item">
+											<a href="#" class="socialMediaIcons__icon socialMediaIcons--teacher__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 											<p class="visuallyHidden">LinkedIn</p>
 										</li>
 									</ul>
@@ -344,22 +344,22 @@
 							<article class="card card--teacher">
 								<img src="http://unsplash.it/358/412">
 								<header class="header header--card">
-									<h3 class="card__title">Arnard Chesek</h3>
-									<p class="card__subTitle">Accounting & Teacher</p>
+									<h3 class="card__title card--teacher__title">Arnard Chesek</h3>
+									<p class="card__subTitle card--teacher__subTitle">Accounting & Teacher</p>
 								</header>
 								<div class="card--teacher__contact">
 									<p>Stay Connected</p>
 									<ul class="socialMediaIcons socialMediaIcons--teacher">
-										<li class="socialMediaIcons__item ">
-											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+										<li class="socialMediaIcons__item socialMediaIcons--teacher__item">
+											<a href="#" class="socialMediaIcons__icon socialMediaIcons--teacher__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 											<p class="visuallyHidden">Facebook</p>
 										</li>
-										<li class="socialMediaIcons__item">
-											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+										<li class="socialMediaIcons__item socialMediaIcons--teacher__item">
+											<a href="#" class="socialMediaIcons__icon socialMediaIcons--teacher__icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 											<p class="visuallyHidden">Twitter</p>
 										</li>
-										<li class="socialMediaIcons__item">
-											<a href="#" class="socialMediaIcon__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+										<li class="socialMediaIcons__item socialMediaIcons--teacher__item">
+											<a href="#" class="socialMediaIcons__icon socialMediaIcons--teacher__icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 											<p class="visuallyHidden">LinkedIn</p>
 										</li>
 									</ul>
@@ -374,9 +374,9 @@
 <!-- ##the_best_pricing_we_offered## -->
 		<section>
 			<div class="wrapper">
-				<header class="header">
-					<p class="header__topTitle">Choose Your Pricing</p>
-					<h2 class="header__title">The Best Pricing We Offer</h2>
+				<header class="header header--section">
+					<p class="header__topTitle header--section__topTitle">Choose Your Pricing</p>
+					<h2 class="header__title header--section__title">The Best Pricing We Offer</h2>
 				</header>
 				
 				<div class="cards">
@@ -386,12 +386,12 @@
 								<header class="header header--card">
 									<h3 class="card__title card--plan__title">Trial</h3>
 									<div class="card__subTitle card__subTitle--price">
-										<p>Free</p>
-										<p>30 Days</p>
+										<p class="card--plan__priceAmount">Free</p>
+										<p class="card--plan__priceDays">30 Days</p>
 									</div>
 								</header>
 				
-								<ul class="card__description">
+								<ul class="card__description card--plan__description">
 									<li>One day trial</li>
 									<li>Limited Courses</li>
 									<li>3 Free Lessons</li>
@@ -405,16 +405,16 @@
 							</article>
 						</li>
 						<li class="cards__item">
-							<article class="card card--plan card--highlight">
+							<article class="card card--plan card--highlighted">
 								<header class="header header--card">
 									<h3 class="card__title card--plan__title">Standard</h3>
-									<div class="card__subTitle card__subTitle--price">
-										<p>$288</p>
-										<p>30 Days</p>
+									<div class="card__subTitle card__subTitle--price card--highlighted__subTitle">
+										<p class="card--plan__priceAmount">$288</p>
+										<p class="card--plan__priceDays">30 Days</p>
 									</div>
 								</header>
 				
-								<ul class="card__description">
+								<ul class="card__description card--plan__description">
 									<li>One Year Standard Access</li>
 									<li>Lorem ipsum.</li>
 									<li>Lorem ipsum dolor.</li>
@@ -432,12 +432,12 @@
 								<header class="header header--card">
 									<h3 class="card__title card--plan__title">Premium</h3>
 									<div class="card__subTitle card__subTitle--price">
-										<p>$139</p>
-										<p>30 Days</p>
+										<p class="card--plan__priceAmount">$139</p>
+										<p class="card--plan__priceDays">30 Days</p>
 									</div>
 								</header>
 				
-								<ul class="card__description">
+								<ul class="card__description card--plan__description">
 									<li>Lorem ipsum dolor.</li>
 									<li>Lorem ipsum.</li>
 									<li>Lorem ipsum.</li>
@@ -457,8 +457,8 @@
 <!-- ##our_testamonial## -->
 		<section>
 			<div class="wrapper">
-				<header class="header">
-					<h2 class="header__title">Our Testimonials</h2>
+				<header class="header header--section">
+					<h2 class="header__title header--section__title">Our Testimonials</h2>
 				</header>
 				
 				<div class="slideShow">
@@ -470,8 +470,8 @@
 										<img src="http://unsplash.it/173/151">
 									</div>
 									<div class="article--2col__col2 article--2col__col2--centerContent">
-										<p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
-										<p class="card__author"><strong>Maria Lehm</strong> - Happy Student</p>
+										<p class="card__description card--testimonial__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
+										<p class="card__author card--testimonial__author"><strong>Maria Lehm</strong> - Happy Student</p>
 									</div>
 								</article>
 							</li>
@@ -481,8 +481,8 @@
 										<img src="http://unsplash.it/173/151">
 									</div>
 									<div class="article--2col__col2 article--2col__col2--centerContent">
-										<p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
-										<p class="card__author"> <strong>Maria Lehm</strong> - Happy Student</p>
+										<p class="card__description card--testimonial__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae reiciendis perferendis eos eum sunt quibusdam quam placeat voluptatibus, possimus et.</p>
+										<p class="card__author card--testimonial__author"> <strong>Maria Lehm</strong> - Happy Student</p>
 									</div>
 								</article>
 							</li>
@@ -495,14 +495,14 @@
 <!-- ##our_gallery## -->
 		<section>
 			<div class="wrapper">
-				<header class="header">
-					<h2 class="header__title">Our Gallery</h2>
-					<p class="header__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quos, reprehenderit placeat.</p>
+				<header class="header header--section">
+					<h2 class="header__title header--section__title">Our Gallery</h2>
+					<p class="header__caption header--section__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quos, reprehenderit placeat.</p>
 				</header>
 				
 				<div class="gallery">
 					<div class="buttons gallery__filterButtons">
-						<button class="gallery__filterButton button">All</button>
+						<button class="gallery__filterButton gallery__filterButton--highlighted button">All</button>
 						<button class="gallery__filterButton button">Photo</button>
 						<button class="gallery__filterButton button">Campus</button>
 						<button class="gallery__filterButton button">Student</button>
@@ -554,22 +554,22 @@
 		<section>
 			<div class="wrapper">
 				<header class="header visuallyHidden">
-					<h2 class="header__title">Contact</h2>
+					<h2 class="header__title header--section__title">Contact</h2>
 				</header>
-				<section class="subSection subSection--highlight subSection--subscribe">
-					<header class="subSection__header">
-						<h3>Subscribe Weekly Newsletter</h3>
+				<section class="subSection subSection--highlighted subSection--subscribe">
+					<header class="subSection__header subSection--highlighted__header header--subSection">
+						<h3 class="subSection__title header__title header--subSection__title">Subscribe Weekly Newsletter</h3>
 					</header>
 					<form class="singleInputForm">
 						<label for="subscriptionEmail" class="visuallyHidden">Subscription Email</label>
-						<input type="text" name="email" class="singleInputForm__input" id="subscriptionEmail">
-						<button type="submit" class="singleInputForm__submit button button--form">Submit</button>
+						<input type="text" name="email" class="singleInputForm__input" id="subscriptionEmail" placeholder="Enter Email Address">
+						<button type="submit" class="singleInputForm__submit button button--form"><span>Submit</span></button>
 					</form>
 				</section>
 				<div class="article--2col">
 					<section class="subSection article--2col__col1">
-						<header class="subSection__header">
-							<h3 class="subSection__title">Get In Touch</h3>
+						<header class="subSection__header header--subSection">
+							<h3 class="subSection__title header__title header--subSection__title">Get In Touch</h3>
 						</header>
 						<form class="contactForm">
 							<label for="name" class="visuallyHidden">Name</label>
@@ -584,21 +584,21 @@
 						</form>
 					</section>
 					<section class="subSection article--2col__col2">
-						<header class="subSection__header">
-							<h3 class="subSection__title">Address</h3>
+						<header class="subSection__header header--subSection">
+							<h3 class="subSection__title header__title header--subSection__title">Address</h3>
 						</header>
 						<ul class="addressList addressList--large">
-							<li class="addressList__item addressList__item--location">
+							<li class="addressList__item addressList--large__item addressList--large__item--location">
 								<p>Lorem ipsum dolor sit.<br>
 									Lorem ipsum dolor sit.
 								</p>
 							</li>
-							<li class="addressList__item addressList__item--phone">
+							<li class="addressList__item addressList--large__item addressList--large__item--phone">
 								<p>Lorem ipsum dolor sit.<br>
 									Lorem ipsum dolor sit.
 								</p>
 							</li>
-							<li class="addressList__item addressList__item--email">
+							<li class="addressList__item addressList--large__item addressList--large__item--email">
 								<p>Lorem ipsum dolor sit.<br>
 									Lorem ipsum dolor sit.
 								</p>
@@ -615,9 +615,9 @@
 			<address class="contactInfo">
 				<h1>Univers</h1>
 				<ul class="addressList addressList--footer">
-					<li class="addressList__item addressList--footer__item addressList__item--hotline">Lorem ipsum dolor sit amet.</li>
-					<li class="addressList__item addressList--footer__item addressList__item--footer addressList__item--email">Lorem ipsum.</li>
-					<li class="addressList__item addressList--footer__item addressList__item--location">Lorem ipsum dolor sit amet.</li>
+					<li class="addressList__item addressList--footer__item addressList--footer__item--hotline addressList__item--hotline">Lorem ipsum dolor sit amet.</li>
+					<li class="addressList__item addressList--footer__item addressList--footer__item--email addressList__item--email">Lorem ipsum.</li>
+					<li class="addressList__item addressList--footer__item addressList--footer__item--location addressList__item--location">Lorem ipsum dolor sit amet.</li>
 				</ul>
 			</address>
 			<nav>
@@ -659,21 +659,25 @@
 					<h3 class="navList__heading">Recent Post</h3>
 					<ul class="navList__list">
 						<li class="navList__item navList__item--article">
-							<article>
-								<img src="http://unsplash.it/89/82">
-								<header class="header header--article">
-									<h2 class="header__title">Application Design</h2>
-								</header>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+							<article class="article--2col">
+								<img class="article--2col__col1" src="http://unsplash.it/89/82">
+								<div class="article--2col__col2--centerContent">
+									<header class="header header--footerArticle">
+										<h2 class="header__title header--footerArticle__title">Application Design</h2>
+									</header>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+								</div>
 							</article>
 						</li>
 						<li class="navList__item navList__item--article">
-							<article>
-								<img src="http://unsplash.it/89/82">
-								<header class="header header--article">
-									<h2 class="header__title">Application Design</h2>
-								</header>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+							<article class="article--2col">
+								<img class="article--2col__col1" src="http://unsplash.it/89/82">
+								<div class="article--2col__col2--centerContent">
+									<header class="header header--footerArticle">
+										<h2 class="header__title header--footerArticle__title">Application Design</h2>
+									</header>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+								</div>
 							</article>
 						</li>
 					</ul>

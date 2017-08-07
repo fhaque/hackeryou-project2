@@ -14,22 +14,45 @@
 
 	&__announcement {
 		width: percentOfWrapper(256px);
+
+		@include font();
+		font-size: remCalc(14px);
+		color: $primaryColorTwo;
 	}
 }
-	
-.contactInfo--topHeadline {
-	display: flex;
-	justify-content: space-between;
 
-	width: percentOfWrapper(378px);
+.contactInfo {
+	font-style: normal;
+
+	&--topHeadline {
+		display: flex;
+		justify-content: space-between;
+
+		width: percentOfWrapper(378px);
+
+		@include font('text', $normalWeight);
+		font-size: remCalc(12px);
+		color: $primaryColorTwo;
+	}
 }
 
 .socialMediaIcons {
 	display: flex;
 	justify-content: space-between;
 
+	&__icon {
+		&--topHeadline {
+			text-decoration: none;
+			color: $secondaryColorOne;
+		}
+
+	}
+
 	&--teacher {
-		// width: 50%;
+		&__icon {
+			color: $primaryColorTwo;
+			font-size: remCalc(20px);
+		}
 	}
 }
 
@@ -51,13 +74,25 @@
 		
 		text-align: center;
 	}
+
+	&__link {
+		text-decoration: none;
+		@include font();
+		color: $primaryColorTwo;
+		font-size: remCalc(17px);
+		text-transform: uppercase;
+		&:hover {
+			color: $secondaryColorOne;
+		}
+	}
+
 }
 
 .hero {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	min-height: 830px;
 	
 	background-color: grey;
@@ -90,6 +125,37 @@
 	}
 }
 
+.detailsContainer {
+	details[open] {
+		summary {
+			font-size: remCalc(18px);
+			color: $secondaryColorTwo;
+			background-color: $secondaryColorOne;
+
+			&::before {
+			font-family: FontAwesome;
+			content: '\f068';
+			}
+		}
+	}
+
+	summary {
+		@include font('normal');
+		font-size: remCalc(14px);
+
+		&::-webkit-details-marker {
+  			display: none
+		}
+
+		&::before {
+			font-family: FontAwesome;
+			content: '\f067';
+		}
+
+	}
+
+}
+
 .cards {
 	&__items {
 		display: flex;
@@ -106,8 +172,31 @@
 	}
 
 	&__subTitle {
+		@include font('normal', 400);
+			background-color: $primaryColorThree;
+		p {
+			color: $primaryColorOne;
+			background-color: $primaryColorThree;
+		}
+		
+
 		&--price {
 			text-align: center;
+		}
+	}
+
+	&__description {
+		font-size: remCalc(14px);
+		line-height: remCalc(24px);
+	}
+
+	&--highlighted {
+		&__subTitle {
+				background-color: $secondaryColorOne;
+			p {
+				background-color: $secondaryColorOne;
+				color: $secondaryColorTwo;
+			}
 		}
 	}
 
@@ -120,10 +209,47 @@
 
 	}
 
+	&--news {
+		&__topTitle {
+			text-align: center;
+			color: $secondaryColorTwo;
+			background-color: $secondaryColorOne;
+			font-size: remCalc(14px);
+			line-height: remCalc(12px);
+		}
+
+		&__title {
+			font-size: remCalc(14px);
+			line-height: remCalc(16px);
+		}
+
+		&__description {
+			font-size: remCalc(12px);
+			line-height: remCalc(24px);
+		}
+	}
+
 	&--teacher {
+		&__title {
+			font-size: remCalc(25px);
+			text-transform: uppercase;
+		}
+
+		&__subTitle {
+			font-weight: $boldWeight;
+			font-size: remCalc(18px);
+			color: $secondaryColorOne;
+		}
+
 		&__contact {
 			display: flex;
+			align-items: flex-end;
+			text-transform: uppercase;
+			p:first-child {
+				font-size: remCalc(18px);
+			}
 		}
+
 
 		&__contact * {
 			flex: 1;
@@ -131,6 +257,10 @@
 	}
 
 	&--course {
+		&__description {
+			font-size: remCalc(10px);
+			line-height: remCalc(18px);
+		}
 		.button {
 			text-align: left;
 		}
@@ -139,7 +269,66 @@
 	&--plan {
 		&__title {
 			text-align: center;
+			font-size: remCalc(24px);
 		}
+
+		&__priceAmount {
+			font-size: remCalc(18px);
+		}
+
+		&__priceDays {
+			font-size: remCalc(24px);
+		}
+
+		&__description {
+			@include font('text', 400);
+			font-size: remCalc(14px);
+			& li::before {
+				margin-right: remCalc(12px);
+				content: "\f00c";
+				color: $secondaryColorOne;
+				font-family: FontAwesome;
+				font-size: remCalc(14px);
+			}
+
+		}
+
+		.button {
+			@include font();
+			font-size: remCalc(14px);
+			text-transform: uppercase;
+		}
+		
+	}
+
+	&--testimonial {
+		position: relative;
+		&__description {
+			line-height: remCalc(30px);
+		}
+
+		&::before {
+				position: absolute;
+				top: 0%;
+				right: 0%;
+
+				content: "";
+				color: $secondaryColorOne;
+				width: 85%;
+				min-height: remCalc(2px);
+		}
+
+		&__author {
+			@include font('heading',400,italic);
+			color: $primaryColorTwo;
+			font-size: remCalc(18px);
+
+			strong {
+				font-weight: $boldWeight;
+				color: $primaryColorOne;
+			}
+		}
+
 	}
 }
 
@@ -162,9 +351,51 @@ a.card {
 	&__item {
 		width: 33.33%;
 	}
+
+	&__filterButton {
+		@include font('text', 400);
+		color: $primaryColorOne;
+		font-size: remCalc(24px);
+		background-color: $primaryColorThree;
+
+		&--highlighted {
+			@include font();
+			color: $secondaryColorTwo;
+			background-color: $secondaryColorOne;
+
+		}
+	}
 }
 
 .subSection {
+	&--highlighted {
+		background-color: $secondaryColorOne;
+
+		&__header * {
+			color: $secondaryColorTwo;
+			text-transform: uppercase;
+		}
+
+		input {
+			color: $secondaryColorTwo;
+			background-color: $secondaryColorOne;
+			border-color: $secondaryColorTwo;
+			&::placeholder {
+				color: $secondaryColorTwo;
+				font-size: remCalc(18px);
+			}
+		}
+
+		button {
+			color: $secondaryColorTwo;
+			background-color: $secondaryColorOne;
+			border-color: $secondaryColorTwo;
+			text-transform: uppercase;
+
+			font-size: remCalc(24px);
+		}
+	}
+
 	&--subscribe {
 		display: flex;
 		justify-content: space-between;
@@ -188,6 +419,14 @@ a.card {
 
 	&__submit {
 		margin: 0;
+
+		span::before {
+			padding-right: remCalc(18px);
+			font-weight: $normalWeight;
+			content: "\f1d8";
+			font-family: FontAwesome;
+			font-size: remCalc(24px);
+		}
 	}
 }
 
@@ -201,6 +440,16 @@ a.card {
 		display: box;
 		width: 100%;
 
+		@include font('normal', 400);
+		color: $primaryColorTwo;
+		font-size: remCalc(20px);
+
+		&::placeholder {
+			@include font('normal', 400);
+			color: $primaryColorTwo;
+			font-size: remCalc(20px);
+		}
+
 		&[name="name"],
 		 &[name="email"] {
 			width: 50%;
@@ -208,48 +457,174 @@ a.card {
 	}
 	textarea {
 		width: 100%;
+		color: $primaryColorTwo;
+		@include font('normal', 400);
+		font-size: remCalc(20px);
 	}
+
 }
 
 footer {
+	color: $secondaryColorTwo;
+	background-color: $primaryColorFour;
+
 	h1 {
+		color: $secondaryColorTwo;
 		text-align: center;
 	}
 
 	nav {
 		display: flex;
 		justify-content: space-between;
+		color: $secondaryColorTwo;
 		.navList {
 			width: 25%;
+			
+			&__heading {
+				color: $secondaryColorTwo;
+				font-size: remCalc(24px);
+			}
+
+			&__item {
+				a {
+					@include font('text', 400);
+
+					color: $secondaryColorTwo;
+					font-size: remCalc(16px);
+				}
+
+				&--article { //TODO: How to fix over-nesting
+					display: flex;
+					align-items: center;
+					img {
+						display: block;
+						float:left;
+
+						width: 50%;
+					}
+					p {
+						@include font('text', 400);
+						color: $secondaryColorTwo;
+						font-size: remCalc(11px);
+						line-height: remCalc(24px);
+					}
+				}
+			}
 		}
 	}
 
 }
 
 .addressList {
+	&--large {
+		&__item {
+			display: flex;
+			justify-content: flex-start;
+
+			p {
+				font-size: remCalc(22px);
+				line-height: remCalc(24px);
+			}
+
+			&::before {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				position: relative;
+				// top: 50%;
+				// left: remCalc(-35px);
+				transform: translateY(-25%);
+				margin-right: remCalc(35px);
+
+				width: remCalc(50px);
+				min-height: remCalc(50px);
+
+				font-family: FontAwesome;
+
+				color: $secondaryColorTwo;
+				background-color: $secondaryColorOne;
+				border-radius: 100%;
+			}
+
+			&--location {
+				&::before {
+					content: "\f041";
+				}
+			}
+
+			&--phone {
+				&::before {
+					content: "\f095";
+				}
+			}
+
+			&--email {
+				&::before {
+					content: "\f003";
+				}
+			}
+
+		}
+	}
 	&--footer {
 		display: flex;
 		justify-content: center;
 		
 		&__item {
 			display: block;
-		}
-	}
-}
 
-.navList {
-	&__item {
-		&--article {
-			@include clearFix();
-			img {
-				display: block;
-				float:left;
+			@include font('text', $normalWeight);
 
-				width: 50%;
+			font-size: remCalc(16px);
+			color: $secondaryColorTwo;
+
+			&::before {
+				color: $secondaryColorOne;
+				margin-right: remCalc(8px);
+
+				font-family: FontAwesome;
+				font-style: normal;
+			}
+
+			&--hotline {
+				&::before {
+					content: "\f10b";
+				}
+			}
+
+			&--email {
+				&::before {
+					content: "\f003";
+				}
+			}
+
+			&--location {
+				&::before {
+					content: "\f041";
+				}
 			}
 		}
 	}
-	
 }
+
+// .navList {
+// 	&__heading {
+// 		font-size: remCalc(24px);
+// 	}
+
+// 	&__item {
+// 		&--article {
+// 			@include clearFix();
+// 			img {
+// 				display: block;
+// 				float:left;
+
+// 				width: 50%;
+// 			}
+// 		}
+// 	}
+	
+// }
 
 

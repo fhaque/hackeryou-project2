@@ -1,18 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,500i,700,700i');
+
 .html, body {
-	font-size: $htmlFontSize;
+	// font-size: 62.5%;
+	// font-size: $htmlFontSize;
 	line-height: 1;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	margin: 0;
 	line-height: 1;
+
+	@include font();
+	color: $primaryColorOne;
+}
+
+h1 {
+	font-size: remCalc(35px);
+}
+
+p {
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+
+	@include font('text', $normalWeight);
+	font-size: remCalc(14px);
 }
 
 ul, ol {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+a, a:visited {
+	text-decoration: none;
 }
 
 .wrapper {
@@ -27,10 +50,36 @@ ul, ol {
 
 .button {
 	display: block;
-
 	flex: 1;
 
-	text-align: center;
 	margin: 0 auto;
+	text-align: center;
+	border-radius: 500px;
+	border: 1px solid $secondaryColorOne;
+
+	@include font();
+
+
+	&--highlighted {
+		color: $secondaryColorTwo;
+		background-color: $secondaryColorOne;
+		border: none;
+	}
+	
+	&--dark {
+		color: $secondaryColorTwo;
+		background-color: $primaryColorFour;
+		border: none;
+	}
 }
 
+.more_info_link {
+	color: $secondaryColorOne;
+	font-size: remCalc(14px);
+	text-transform: lowercase;
+	&::after {
+		font-family: FontAwesome;
+		margin-left: remCalc(6px);
+		content: '\f178';
+	}
+}
