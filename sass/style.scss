@@ -14,6 +14,7 @@
 
 	&__announcement {
 		width: percentOfWrapper(256px);
+		min-width: remCalc(256px);
 
 		@include font();
 		font-size: remCalc(14px);
@@ -29,6 +30,7 @@
 		justify-content: space-between;
 
 		width: percentOfWrapper(378px);
+		min-width: remCalc(378px);
 
 		@include font('text', $normalWeight);
 		font-size: remCalc(12px);
@@ -262,7 +264,14 @@
 			line-height: remCalc(18px);
 		}
 		.button {
-			text-align: left;
+			margin: 0;
+
+			&::after {
+				margin-left: remCalc(3px);
+				content: "\f054";
+				font-family: FontAwesome;
+				font-size: remCalc(4px);
+			}
 		}
 	}
 
@@ -531,6 +540,8 @@ footer {
 				justify-content: center;
 				align-items: center;
 
+				flex-grow: 0;
+				flex-shrink: 0;
 				position: relative;
 				// top: 50%;
 				// left: remCalc(-35px);
@@ -539,6 +550,7 @@ footer {
 
 				width: remCalc(50px);
 				min-height: remCalc(50px);
+				max-height: remCalc(50px);
 
 				font-family: FontAwesome;
 

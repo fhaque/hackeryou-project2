@@ -39,26 +39,45 @@ a, a:visited {
 }
 
 .wrapper {
-	width: $wrapperWidth;
+	width: 100%;
+	max-width: $wrapperWidth;
 	padding: 0;
 	margin: 0 auto;
 }
 
+
 .buttons {
 	display: flex;
+	justify-content: space-between;
+	width: percentOfWrapper(396px);
+	min-width: remCalc(396px);
+
+	margin: 0 auto;
+
+	.button {
+		display: block;
+
+		min-width: remCalc(188px);
+		padding: remCalc(20px);
+		margin: 0 remCalc(10px);
+
+		font-size: remCalc(13px);
+	}
 }
 
 .button {
 	display: block;
 	flex: 1;
 
+	padding: remCalc(24px);
 	margin: 0 auto;
 	text-align: center;
 	border-radius: 500px;
 	border: 1px solid $secondaryColorOne;
 
 	@include font();
-
+	font-size: remCalc(18px);
+	text-transform: uppercase;
 
 	&--highlighted {
 		color: $secondaryColorTwo;
@@ -71,6 +90,22 @@ a, a:visited {
 		background-color: $primaryColorFour;
 		border: none;
 	}
+
+	&--card {
+		width: remCalc(67px);
+		padding: remCalc(10px);
+
+		@include font('text', 400);
+		font-size: remCalc(10px);
+		color: $secondaryColorTwo;
+		background-color: $secondaryColorOne;
+		border: none;
+		text-align: center;
+	}
+}
+
+a.button {
+	display: block;
 }
 
 .more_info_link {

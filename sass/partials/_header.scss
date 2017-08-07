@@ -23,8 +23,11 @@
 		}
 
 		.button {
+			
+			width: remCalc(244px);
 			color: $secondaryColorTwo;
-			text-decoration: none;
+			border-color: $secondaryColorTwo;
+			text-transform: uppercase;
 		}
 	}
 
