@@ -61,6 +61,14 @@
 	}
 
 	&--teacher {
+		justify-content: flex-start;
+		align-items: flex-start;
+		align-content: flex-start;
+
+		&__item {
+			flex: 1;
+		}
+
 		&__icon {
 			color: $primaryColorTwo;
 			font-size: remCalc(20px);
@@ -216,6 +224,12 @@
 		width: (100%  - 2 * percentOfWrapper(50px)) / 3;
 	}
 
+	&--testimonial {
+		&__item {
+			width: 50% - percentOfWrapper(20px);
+		}
+	}
+
 	.buttons {
 		margin-top: remCalc(74px);
 	}
@@ -282,49 +296,85 @@
 	}
 
 	&--news {
+		position: relative;
+
 		&__topTitle {
+			position: absolute;
+			left: 75%;
+			transform: translateY(-50%);
+
 			text-align: center;
 			color: $secondaryColorTwo;
-			background-color: $secondaryColorOne;
 			font-size: remCalc(14px);
-			line-height: remCalc(12px);
+			line-height: remCalc(24px);
+
+			&::after {
+				position: absolute;
+				transform: translate(-70%,-50%);
+
+				z-index:-1;
+
+				content: "";
+				width: remCalc(63px);
+				height: remCalc(63px);
+				background-color: $secondaryColorOne;
+
+			}
 		}
 
 		&__title {
+			width: 65%;
+			margin-top: remCalc(27px);
+			margin-bottom: remCalc(23px);
+
 			font-size: remCalc(14px);
 			line-height: remCalc(16px);
 		}
 
 		&__description {
+			width: 65%;
+			margin-bottom: remCalc(16px) - remCalc(24px) / 2;
 			font-size: remCalc(12px);
 			line-height: remCalc(24px);
 		}
 	}
 
 	&--teacher {
+
 		&__title {
+			margin-top: remCalc(40px);
+			margin-bottom: remCalc(20px);
+
 			font-size: remCalc(25px);
 			text-transform: uppercase;
 		}
 
 		&__subTitle {
+			margin-bottom: remCalc(30px);
+
 			font-weight: $boldWeight;
 			font-size: remCalc(18px);
 			color: $secondaryColorOne;
+			background-color: transparent;
 		}
 
 		&__contact {
 			display: flex;
 			align-items: flex-end;
+
+			width: 75%;
+
 			text-transform: uppercase;
 			p:first-child {
+				flex-shrink: 0;
+				width: 70%;
 				font-size: remCalc(18px);
 			}
-		}
 
-
-		&__contact * {
-			flex: 1;
+			.socialMediaIcons--teacher {
+				width: 30%;
+				flex: 1;
+			}
 		}
 	}
 
@@ -375,12 +425,26 @@
 	}
 
 	&--plan {
+		box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
+
+		&--highlighted {
+			box-shadow: 0px 0px 28.13px 0.87px transparentize($secondaryColorOne, 0.5);
+		}
+
 		&__title {
+			padding: remCalc(28px) 0;
+			margin-top: 20px;
 			text-align: center;
 			font-size: remCalc(24px);
 		}
 
+		&__subTitle {
+			padding: remCalc(28px) 0;
+			box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.2);
+		}
+
 		&__priceAmount {
+			margin-bottom: remCalc(18px);
 			font-size: remCalc(18px);
 		}
 
@@ -389,6 +453,8 @@
 		}
 
 		&__description {
+			padding: remCalc(40px) remCalc(80px);
+
 			@include font('text', 400);
 			font-size: remCalc(14px);
 			& li::before {
@@ -402,15 +468,40 @@
 		}
 
 		.button {
+			width: 100%;
+			border: none;
+			border-top: 1px solid $detailsBorderColor;
+			border-radius: 0;
 			@include font();
 			font-size: remCalc(14px);
 			text-transform: uppercase;
+
+			&:hover {
+				color: $secondaryColorOne;
+			}
 		}
 		
 	}
 
 	&--testimonial {
 		position: relative;
+
+		width: 100%;
+		padding: remCalc(36px) remCalc(26px);
+
+		z-index: $zIndexOne;
+
+		border: 1px solid $detailsBorderColor;
+
+		.article--2col__col1 {
+			width: 34%;
+			margin-right: remCalc(12px);
+		}
+
+		.article--2col__col2 {
+			width: calc(100% - 34% - 12px); //TODO: how to fix 12px into rem?
+		}
+
 		&__description {
 			line-height: remCalc(30px);
 		}
@@ -419,6 +510,8 @@
 				position: absolute;
 				top: 0%;
 				right: 0%;
+
+				z-index: $zIndexTwo;
 
 				content: "";
 				color: $secondaryColorOne;
@@ -455,22 +548,47 @@ a.card {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
+
+		margin-bottom: remCalc(62px);
 	}
 	&__item {
 		width: 33.33%;
 	}
 
-	&__filterButton {
+	&__filterButtons {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		margin: 0 auto;
+		margin-bottom: remCalc(47px);
+
+		& > * {
+			margin: 0 remCalc(5px);
+			max-width: percentOfWrapper(145px);
+			flex: 1; 
+		}
+	}
+
+	&__filterButton.button {
+
+		padding: remCalc(12px) remCalc(18px);
 		@include font('text', 400);
 		color: $primaryColorOne;
 		font-size: remCalc(24px);
 		background-color: $primaryColorThree;
+		border-radius: 0;
+		border: none;
+		text-transform: capitalize;
+	}
 
-		&--highlighted {
+	&__filterButton {
+		&--highlighted.button {
+			padding: remCalc(14px) remCalc(18px);
 			@include font();
+			font-size: remCalc(24px);
 			color: $secondaryColorTwo;
 			background-color: $secondaryColorOne;
-
 		}
 	}
 }
@@ -507,10 +625,22 @@ a.card {
 	&--subscribe {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 
 		& > * {
 			width: 50%;
 		}
+	}
+
+	&--contactForm,
+	&--contactAddress {
+		.subSection__header {
+			margin-bottom: 30px;
+		}
+	}
+
+	&--contactForm {
+		padding-right: remCalc(45px);
 	}
 }
 
@@ -518,15 +648,25 @@ a.card {
 	display: flex;
 	justify-content: flex-start;
 
+	border: 1px solid $secondaryColorTwo;
+	border-radius: 5000px;
+	overflow: hidden;
+
 	&__input {
 		display: block;
 
+		width: 70%;
 		margin: 0;
-		padding: 0;
+		padding-left: 10%;
+		border: none;
+		border-right: 1px solid $secondaryColorTwo;
 	}
 
 	&__submit {
 		margin: 0;
+		border: none;
+
+		width: 30%;
 
 		span::before {
 			padding-right: remCalc(18px);
@@ -546,7 +686,14 @@ a.card {
 
 	input {
 		display: box;
+		
 		width: 100%;
+		min-height: remCalc(64px);
+		padding-left: 5%;
+		margin: remCalc(10px);
+
+		border: 1px solid $detailsBorderColor;
+		border-radius: 10px;
 
 		@include font('normal', 400);
 		color: $primaryColorTwo;
@@ -560,14 +707,42 @@ a.card {
 
 		&[name="name"],
 		 &[name="email"] {
-			width: 50%;
+			width: calc(50% - 10px);
+		}
+
+		&[name="name"] {
+			margin-left: 0;
+		}
+
+		&[name="email"] {
+			margin-right: 0;
+		}
+
+		&[name="subject"] {
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: remCalc(10px);
 		}
 	}
 	textarea {
 		width: 100%;
+		min-height: remCalc(150px);
+		padding: 5%;
+		margin-top: remCalc(10px);
+		margin-bottom: remCalc(42px);
+
+		border: 1px solid $detailsBorderColor;
+		border-radius: 10px;
+
 		color: $primaryColorTwo;
 		@include font('normal', 400);
 		font-size: remCalc(20px);
+
+		resize: none;
+	}
+
+	button {
+		margin-left: 0;
 	}
 
 }
@@ -629,6 +804,8 @@ footer {
 			display: flex;
 			justify-content: flex-start;
 
+			margin-bottom: remCalc(45px);
+
 			p {
 				font-size: remCalc(22px);
 				line-height: remCalc(24px);
@@ -642,9 +819,7 @@ footer {
 				flex-grow: 0;
 				flex-shrink: 0;
 				position: relative;
-				// top: 50%;
-				// left: remCalc(-35px);
-				transform: translateY(-25%);
+				transform: translateY(-10%);
 				margin-right: remCalc(35px);
 
 				width: remCalc(50px);
@@ -652,6 +827,7 @@ footer {
 				max-height: remCalc(50px);
 
 				font-family: FontAwesome;
+				font-size: remCalc(22px);
 
 				color: $secondaryColorTwo;
 				background-color: $secondaryColorOne;

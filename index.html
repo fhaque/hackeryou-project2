@@ -70,8 +70,9 @@
 <!-- ##main## -->
 	<main>
 <!-- ##about_us## -->
-		<div class="wrapper">
-			<section>
+		<section class="bottomDivider">
+			<div class="wrapper">
+			
 				<header class="header header--section">
 					<h2 class="header__title header--section__title">About Us</h2>
 				</header>
@@ -110,9 +111,8 @@
 						<img src="http://unsplash.it/602/504">
 					</div>
 				</article>
-		</div>
+			</div>
 		</section>
-		<div class="crossPageBorder"></div>
 <!-- ##education_services## -->
 		<section>
 			<div class="wrapper">
@@ -229,7 +229,7 @@
 			</div>
 		</section>
 <!-- ##latest_news## -->
-		<section>
+		<section class="bottomDivider">
 			<div class="wrapper">
 				<header class="header header--section">
 					<h2 class="header__title header--section__title">Latest News</h2>
@@ -376,12 +376,12 @@
 							</article>
 						</li>
 					</ul>
-					<a href="#" class="button">All Teachers</a>
+					<a href="#" class="button button--highlighted">All Teachers</a>
 				</div>
 			</div>
 		</section>
 <!-- ##the_best_pricing_we_offered## -->
-		<section>
+		<section class="tintedBackground">
 			<div class="wrapper">
 				<header class="header header--section">
 					<p class="header__topTitle header--section__topTitle">Choose Your Pricing</p>
@@ -392,9 +392,9 @@
 					<ul class="cards__items">
 						<li class="cards__item">
 							<article class="card card--plan">
-								<header class="header header--card">
+								<header class="card--plan__header header header--card">
 									<h3 class="card__title card--plan__title">Trial</h3>
-									<div class="card__subTitle card__subTitle--price">
+									<div class="card__subTitle card--plan__subTitle card__subTitle--price card--plan__subTitle--price">
 										<p class="card--plan__priceAmount">Free</p>
 										<p class="card--plan__priceDays">30 Days</p>
 									</div>
@@ -414,10 +414,10 @@
 							</article>
 						</li>
 						<li class="cards__item">
-							<article class="card card--plan card--highlighted">
-								<header class="header header--card">
+							<article class="card card--plan card--plan--highlighted card--highlighted">
+								<header class="card--plan__header header header--card">
 									<h3 class="card__title card--plan__title">Standard</h3>
-									<div class="card__subTitle card__subTitle--price card--highlighted__subTitle">
+									<div class="card__subTitle  card--plan__subTitle card__subTitle--price card--highlighted__subTitle card--plan__subTitle--price">
 										<p class="card--plan__priceAmount">$288</p>
 										<p class="card--plan__priceDays">30 Days</p>
 									</div>
@@ -438,9 +438,9 @@
 						</li>
 						<li class="cards__item">
 							<article class="card card--plan">
-								<header class="header header--card">
+								<header class="card--plan__header header header--card">
 									<h3 class="card__title card--plan__title">Premium</h3>
-									<div class="card__subTitle card__subTitle--price">
+									<div class="card__subTitle  card--plan__subTitle card__subTitle--price card--plan__subTitle--price">
 										<p class="card--plan__priceAmount">$139</p>
 										<p class="card--plan__priceDays">30 Days</p>
 									</div>
@@ -464,16 +464,16 @@
 			</div>
 		</section>
 <!-- ##our_testamonial## -->
-		<section>
+		<section class="bottomDivider">
 			<div class="wrapper">
 				<header class="header header--section">
 					<h2 class="header__title header--section__title">Our Testimonials</h2>
 				</header>
 				
 				<div class="slideShow">
-					<div class="cards">
-						<ul class="cards__items">
-							<li class="cards__item">
+					<div class="cards--testimonial">
+						<ul class="cards__items cards--testimonial__items">
+							<li class="cards__item cards--testimonial__item">
 								<article class="card card--testimonial article--2col">
 									<div class="article--2col__col1">
 										<img src="http://unsplash.it/173/151">
@@ -484,7 +484,7 @@
 									</div>
 								</article>
 							</li>
-							<li class="cards__item">
+							<li class="cards__item cards--testimonial__item">
 								<article class="card card--testimonial article--2col">
 									<div class="article--2col__col1">
 										<img src="http://unsplash.it/173/151">
@@ -510,7 +510,7 @@
 				</header>
 				
 				<div class="gallery">
-					<div class="buttons gallery__filterButtons">
+					<div class="gallery__filterButtons">
 						<button class="gallery__filterButton gallery__filterButton--highlighted button">All</button>
 						<button class="gallery__filterButton button">Photo</button>
 						<button class="gallery__filterButton button">Campus</button>
@@ -565,18 +565,22 @@
 				<header class="header visuallyHidden">
 					<h2 class="header__title header--section__title">Contact</h2>
 				</header>
-				<section class="subSection subSection--highlighted subSection--subscribe">
-					<header class="subSection__header subSection--highlighted__header header--subSection">
-						<h3 class="subSection__title header__title header--subSection__title">Subscribe Weekly Newsletter</h3>
-					</header>
-					<form class="singleInputForm">
-						<label for="subscriptionEmail" class="visuallyHidden">Subscription Email</label>
-						<input type="text" name="email" class="singleInputForm__input" id="subscriptionEmail" placeholder="Enter Email Address">
-						<button type="submit" class="singleInputForm__submit button button--form"><span>Submit</span></button>
-					</form>
+			</div>
+				<section class="highlightedBackground">
+					<div class="wrapper subSection subSection--highlighted subSection--subscribe">
+						<header class="subSection__header subSection--highlighted__header header--subSection">
+							<h3 class="subSection__title header__title header--subSection__title">Subscribe Weekly Newsletter</h3>
+						</header>
+						<form class="singleInputForm">
+							<label for="subscriptionEmail" class="visuallyHidden">Subscription Email</label>
+							<input type="text" name="email" class="singleInputForm__input" id="subscriptionEmail" placeholder="Enter Email Address">
+							<button type="submit" class="singleInputForm__submit button button--form"><span>Submit</span></button>
+						</form>
+					</div>
 				</section>
+			<div class="wrapper">
 				<div class="article--2col">
-					<section class="subSection article--2col__col1">
+					<section class="subSection subSection--contactForm article--2col__col1">
 						<header class="subSection__header header--subSection">
 							<h3 class="subSection__title header__title header--subSection__title">Get In Touch</h3>
 						</header>
@@ -589,10 +593,10 @@
 							<input type="text" name="subject" placeholder="Subject*" required>
 							<label for="message" class="visuallyHidden">Message</label>
 							<textarea id="message" placeholder="type you message..."></textarea>
-							<button type="submit" class="button button--form">Send Message</button>
+							<button type="submit" class="button button--form button--highlighted">Send Message</button>
 						</form>
 					</section>
-					<section class="subSection article--2col__col2">
+					<section class="subSection subSection--contactAddress article--2col__col2">
 						<header class="subSection__header header--subSection">
 							<h3 class="subSection__title header__title header--subSection__title">Address</h3>
 						</header>

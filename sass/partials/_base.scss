@@ -41,10 +41,18 @@ a, a:visited {
 
 section {
 	padding: remCalc(125px) 0;
+
+	&.bottomDivider {
+		border-bottom: 1px solid $headlineBorderColor;
+	}
 }
 
 .tintedBackground {
 	background-color: $primaryColorThree;
+}
+
+.highlightedBackground {
+	background-color: $secondaryColorOne;
 }
 
 .wrapper {
@@ -112,6 +120,11 @@ section {
 		background-color: $secondaryColorOne;
 		border: none;
 		text-align: center;
+	}
+
+	&--form {
+		border-radius: 10px;
+		max-width: remCalc(236px);
 	}
 }
 

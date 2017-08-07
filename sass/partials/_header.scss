@@ -61,6 +61,7 @@
 		}
 
 		&__topTitle {
+			margin-bottom: remCalc(30px);
 			@include font('text', 400);
 			font-size: remCalc(18px);
 			text-transform: uppercase;
