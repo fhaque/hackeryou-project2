@@ -593,6 +593,68 @@ a.card {
 	}
 }
 
+.enlargeable_image {
+	position: relative;
+	&__overlay {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		color: $secondaryColorTwo;
+		font-size: remCalc(25px);
+		background-color: $secondaryColorOne;
+		opacity: 0;
+	}
+
+	&__icons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		margin-top: remCalc(10px);
+	}
+	
+	&__icon {
+		display: block;
+		position: relative;
+
+		margin: 50%;
+
+		&::after {
+			position: absolute;
+			transform: translate(-70%,-25%);
+
+			z-index: $zIndexOne;
+
+			content: "";
+			width: remCalc(54px);
+			height: remCalc(54px);
+			border: 1px solid $secondaryColorTwo;
+			border-radius: 100%;
+		}
+
+		&:hover {
+			color: $secondaryColorOne;
+
+
+			&::after {
+				background-color: $secondaryColorTwo;
+				z-index: $zIndexOne;
+			}
+		}
+	}
+
+	&:hover &__overlay {
+		opacity: 0.75;
+	}
+}
+
 .subSection {
 	&--highlighted {
 		background-color: $secondaryColorOne;
@@ -751,24 +813,40 @@ footer {
 	color: $secondaryColorTwo;
 	background-color: $primaryColorFour;
 
+	padding-top: remCalc(150px);
+
 	h1 {
+		margin-bottom: remCalc(30px);
+
 		color: $secondaryColorTwo;
 		text-align: center;
+		text-transform: capitalize;
+	}
+
+	address {
+		padding-bottom: remCalc(30px);
 	}
 
 	nav {
 		display: flex;
 		justify-content: space-between;
+		
+		padding-top: remCalc(50px);
+		padding-bottom: remCalc(120px);
+
 		color: $secondaryColorTwo;
 		.navList {
 			width: 25%;
 			
 			&__heading {
+				margin-bottom: remCalc(30px);
 				color: $secondaryColorTwo;
 				font-size: remCalc(24px);
 			}
 
 			&__item {
+				margin-bottom: remCalc(26px);
+
 				a {
 					@include font('text', 400);
 
@@ -776,13 +854,21 @@ footer {
 					font-size: remCalc(16px);
 				}
 
+				&:last-child {
+					border-bottom: none;
+				}
+
 				&--article { //TODO: How to fix over-nesting
 					display: flex;
 					align-items: center;
+					position: relative;
+
+					padding-bottom: remCalc(26px);
+					border-bottom: 2px solid $footerBorderColor;
+
 					img {
 						display: block;
-						float:left;
-
+						margin-right: remCalc(20px);
 						width: 50%;
 					}
 					p {
@@ -794,6 +880,16 @@ footer {
 				}
 			}
 		}
+	}
+
+	.footer__copyright {
+		padding: remCalc(30px) 0;
+		text-align: center;
+
+		@include font('text', 400);
+		color: $secondaryColorTwo;
+		font-size: remCalc(18px);
+		background-color: $copyrightBackgroundColor;
 	}
 
 }
@@ -860,6 +956,7 @@ footer {
 		
 		&__item {
 			display: block;
+			margin: 0 remCalc(10px);
 
 			@include font('text', $normalWeight);
 
@@ -894,24 +991,4 @@ footer {
 		}
 	}
 }
-
-// .navList {
-// 	&__heading {
-// 		font-size: remCalc(24px);
-// 	}
-
-// 	&__item {
-// 		&--article {
-// 			@include clearFix();
-// 			img {
-// 				display: block;
-// 				float:left;
-
-// 				width: 50%;
-// 			}
-// 		}
-// 	}
-	
-// }
-
 

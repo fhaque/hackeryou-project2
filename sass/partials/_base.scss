@@ -47,6 +47,12 @@ section {
 	}
 }
 
+address {
+	&.bottomDivider {
+		border-bottom: 1px solid $footerBorderColor;
+	}
+}
+
 .tintedBackground {
 	background-color: $primaryColorThree;
 }
