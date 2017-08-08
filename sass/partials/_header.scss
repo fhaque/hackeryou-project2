@@ -9,6 +9,11 @@
 
 	&--hero {
 		color: $secondaryColorTwo;
+
+		& > * {
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+		}
+
 		&__topTitle {
 			color: $secondaryColorTwo;
 			font-size: remCalc(28px);

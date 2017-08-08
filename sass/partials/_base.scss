@@ -51,19 +51,19 @@ section {
 	}
 
 	//TODO: For testing
-	background-color: lightgreen;
+	// background-color: lightgreen;
 
-	@include respond-to("large") {
-		background-color: yellow;
-	}
+	// @include respond-to("large") {
+	// 	background-color: yellow;
+	// }
 
-	@include respond-to("medium") {
-		background-color: orange;
-	}
+	// @include respond-to("medium") {
+	// 	background-color: orange;
+	// }
 
-		@include respond-to("small") {
-		background-color: salmon;
-	}
+	// 	@include respond-to("small") {
+	// 	background-color: salmon;
+	// }
 }
 
 address {
@@ -86,7 +86,7 @@ address {
 	padding: 0 remCalc(5px);
 	margin: 0 auto;
 
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 
