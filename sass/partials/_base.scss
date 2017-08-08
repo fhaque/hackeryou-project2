@@ -93,17 +93,18 @@ address {
 .buttons {
 	display: flex;
 	justify-content: space-between;
-	width: percentOfWrapper(396px);
-	min-width: remCalc(396px);
+	// width: 100%;
+	max-width: remCalc(450px);
 
 	margin: 0 auto;
 
 	.button {
 		display: block;
 
-		min-width: remCalc(188px);
+		min-width: remCalc(150px);
+		max-width: remCalc(210px);
 		padding: remCalc(20px);
-		margin: 0 remCalc(10px);
+		// margin: 0 remCalc(10px);
 
 		font-size: remCalc(13px);
 	}

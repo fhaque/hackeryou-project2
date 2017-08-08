@@ -156,6 +156,33 @@
 	}
 }
 
+.article--contactSubSections {
+	@include respond-to("medium") {
+		flex-direction: column-reverse;
+	}
+
+	.article--2col__col1 {
+		width: 70%;
+
+		@include respond-to("medium") {
+			width: 100%;
+			padding-top: 0;
+			padding: 0;
+			margin: 0 auto;
+		}
+	}
+
+	.article--2col__col2 {
+		width: 30%;
+
+		@include respond-to("medium") {
+			width: 100%;
+			padding-bottom: 0;
+			margin: 0 auto;
+		}
+	}
+}
+
 .detailsContainer {
 	margin-top: remCalc(25px);
 
@@ -269,6 +296,7 @@
 
 	& > .button {
 		margin-top: remCalc(74px);
+		min-width: remCalc(240px);
 	}
 }
 
@@ -802,6 +830,7 @@ a.card {
 .gallery {
 	img {
 		display: block;
+		width: 100%;
 	}
 	&__items {
 		display: flex;
@@ -812,11 +841,16 @@ a.card {
 	}
 	&__item {
 		width: 33.33%;
+
+		@include respond-to("small") {
+			width: 50%;
+		}
 	}
 
 	&__filterButtons {
 		display: flex;
 		justify-content: center;
+		align-content: space-between;
 		flex-wrap: wrap;
 
 		margin: 0 auto;
@@ -830,8 +864,10 @@ a.card {
 	}
 
 	&__filterButton.button {
-
+		min-width: remCalc(127px);
 		padding: remCalc(12px) remCalc(18px);
+		margin-bottom: remCalc(10px);
+
 		@include font('text', 400);
 		color: $primaryColorOne;
 		font-size: remCalc(24px);
@@ -849,6 +885,10 @@ a.card {
 			color: $secondaryColorTwo;
 			background-color: $secondaryColorOne;
 		}
+	}
+
+	& > .button {
+		min-width: remCalc(213px);
 	}
 }
 
@@ -930,6 +970,14 @@ a.card {
 			&::placeholder {
 				color: $secondaryColorTwo;
 				font-size: remCalc(18px);
+
+				@include respond-to("medium") {
+					font-size: remCalc(14px);
+				}
+
+				@include respond-to("small") {
+					font-size: remCalc(10px);
+				}
 			}
 		}
 
@@ -951,6 +999,7 @@ a.card {
 		& > * {
 			width: 50%;
 		}
+
 	}
 
 	&--contactForm,
@@ -983,18 +1032,36 @@ a.card {
 		border-right: 1px solid $secondaryColorTwo;
 	}
 
-	&__submit {
+	&__submit.button--form {
 		margin: 0;
+		padding-left: remCalc(10px);
 		border: none;
 
 		width: 30%;
 
 		span::before {
-			padding-right: remCalc(18px);
+			padding-right: remCalc(16px);
 			font-weight: $normalWeight;
 			content: "\f1d8";
 			font-family: FontAwesome;
 			font-size: remCalc(24px);
+		}
+
+		@include respond-to("large") {
+			font-size: remCalc(16px);
+
+			span::before {
+				padding-right: remCalc(10px);
+			}
+		}
+
+		@include respond-to("medium") {
+			font-size: remCalc(0px);
+
+			span::before {
+				padding-right: 0;
+				font-size: remCalc(30px);
+			}
 		}
 	}
 }
@@ -1029,6 +1096,12 @@ a.card {
 		&[name="name"],
 		 &[name="email"] {
 			width: calc(50% - 10px);
+
+			@include respond-to("medium") {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 
 		&[name="name"] {
@@ -1063,7 +1136,7 @@ a.card {
 	}
 
 	button {
-		margin-left: 0;
+		margin: 0 auto;
 	}
 
 }
@@ -1155,18 +1228,41 @@ footer {
 
 .addressList {
 	&--large {
+		@include respond-to("medium") {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-wrap: wrap;
+		}
+
 		&__item {
 			display: flex;
 			justify-content: flex-start;
 
 			margin-bottom: remCalc(45px);
 
+			@include respond-to("medium") {
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+
+				width: 45%;
+			}
+
 			p {
 				font-size: remCalc(22px);
 				line-height: remCalc(24px);
+
+				@include respond-to("large") {
+					font-size: remCalc(16px);
+				}
+
+				@include respond-to("small") {
+					font-size: remCalc(14px);
+				}
 			}
 
-			&::before {
+			&::before { //TODO: Cleanup
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -1187,6 +1283,21 @@ footer {
 				color: $secondaryColorTwo;
 				background-color: $secondaryColorOne;
 				border-radius: 100%;
+
+				@include respond-to("large") {
+					font-size: remCalc(18px);
+
+					width: remCalc(30px);
+					min-height: remCalc(30px);
+					max-height: remCalc(30px);
+					margin-right: remCalc(20px);
+				}
+
+				@include respond-to("medium") {
+					width: remCalc(50px);
+					min-height: remCalc(50px);
+					max-height: remCalc(50px);
+				}
 			}
 
 			&--location {
