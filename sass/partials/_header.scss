@@ -120,8 +120,10 @@
 
 	&--footerArticle {
 		&__title {
+			text-align: left;
 			color: $secondaryColorTwo;
 			font-size: remCalc(15px);
+			line-height: remCalc(24px);
 		}
 	}
 	
