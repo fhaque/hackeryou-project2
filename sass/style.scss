@@ -14,6 +14,16 @@
 
 	padding: remCalc(32px) 0;
 
+	@include respond-to("medium") {
+		position: fixed;
+		width: 100%;
+		padding-top: remCalc(25px);
+
+		z-index: $zIndexThree;
+
+		background-color: $secondaryColorTwo;
+	}
+
 	&__announcement {
 		width: percentOfWrapper(256px);
 		min-width: remCalc(256px);
@@ -21,6 +31,26 @@
 		@include font();
 		font-size: remCalc(14px);
 		color: $primaryColorTwo;
+	}
+}
+
+.menuBarIcon {
+	display: none;
+	position: fixed;
+	right: 0;
+	top: remCalc(10px);
+
+	padding: remCalc(10px);
+	border: 1px solid $primaryColorOne;
+	border-radius: 10px;
+
+	z-index: 999;
+
+	color: $primaryColorOne;
+	font-size: remCalc(25px);
+
+	@include respond-to("medium") {
+		display: block;
 	}
 }
 
@@ -38,9 +68,23 @@
 		width: percentOfWrapper(378px);
 		min-width: remCalc(378px);
 
+		margin-right: remCalc(60px);
+
 		@include font('text', $normalWeight);
 		font-size: remCalc(12px);
 		color: $primaryColorTwo;
+	}
+
+	&__email {
+		@include respond-to("medium") {
+			display: none;
+		}
+	}
+
+	&__phone {
+		@include respond-to("small") {
+			display: none;
+		}
 	}
 }
 
@@ -52,12 +96,17 @@
 		&--topHeadline {
 			text-decoration: none;
 			color: $secondaryColorOne;
+
+			@include respond-to("medium") {
+				display: none;
+				font-size: remCalc(16px);
+			}
 		}
 
 	}
 
 	&--topHeadline {
-		width: remCalc(70px);
+		width: remCalc(90px);
 	}
 
 	&--teacher {
@@ -83,6 +132,37 @@
 	align-items: center;
 
 	padding: remCalc(32px) 0;
+
+	@include respond-to("large") {
+		padding: remCalc(16px) 0;
+	}
+
+	@include respond-to("medium") {
+		flex-direction: column;
+		justify-content: flex-start;
+
+		position: fixed;
+		width: remCalc(400px);
+		min-height: 100vh;
+		top: 0;
+		right: 100%;
+
+		z-index: $zIndexFour; 
+
+		background-color: $secondaryColorTwo;
+
+		&--viewable {
+			right: 0;
+		}
+
+	}
+
+	&__title {
+		@include respond-to("medium") {
+			margin: 0;
+			padding-bottom: remCalc(20px);
+		}
+	}
 	
 	&__items { //TODO: get the wrap alignment correct
 		display: flex;
@@ -90,12 +170,42 @@
 		flex-wrap: wrap;
 
 		width: percentOfWrapper(848px);
+		min-width: remCalc(771px);
+
+		@include respond-to("large") {
+			justify-content: flex-start;
+			min-width: 0%;
+			width: 70%;
+		}
+
+		@include respond-to("medium") {
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+
+		}
 	}
 
 	&__item {
 		display: block;
 		
 		text-align: center;
+
+		@include respond-to("large") {
+			margin: 0 remCalc(10px);
+			margin-bottom: remCalc(10px);
+
+			a {
+				display: block;
+				padding: remCalc(10px);
+				background-color: $primaryColorThree;
+				
+				&:hover {
+					box-shadow: 0px 0px 1px 0.87px rgba(0, 0, 0, 0.1); 
+				}
+			}
+		}
 	}
 
 	&__link {
