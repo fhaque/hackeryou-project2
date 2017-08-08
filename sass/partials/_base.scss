@@ -107,6 +107,10 @@ address {
 		// margin: 0 remCalc(10px);
 
 		font-size: remCalc(13px);
+
+		@include respond-to("small") {
+			max-width: remCalc(190px);
+		}
 	}
 }
 
