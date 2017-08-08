@@ -14,6 +14,8 @@
 
 	padding: remCalc(32px) 0;
 
+	background-color: $primaryColorTwo;
+
 	@include respond-to("medium") {
 		position: fixed;
 		width: 100%;
@@ -37,7 +39,7 @@
 .menuBarIcon {
 	display: none;
 	position: fixed;
-	right: 0;
+	right: remCalc(5px);
 	top: remCalc(10px);
 
 	padding: remCalc(10px);
@@ -287,10 +289,6 @@
 
 			width: 90%;
 			max-height: 100%;
-
-			p {
-				color: $secondaryColorTwo;
-			}
 		}
 
 		@include respond-to("small") {
@@ -299,8 +297,16 @@
 			top: 0%;
 			left: 0;
 			bottom: inherit;
+		}
 
-			p {
+		p {
+			line-height: remCalc(24px);
+
+			@include respond-to("medium") {
+				color: $secondaryColorTwo;
+			}
+
+			@include respond-to("small") {
 				color: $primaryColorTwo;
 			}
 		}
@@ -1049,23 +1055,16 @@
 
 		border: 1px solid $detailsBorderColor;
 
-		.article--2col__col1 {
-			width: 34%;
-			margin-right: remCalc(12px);
+		@include respond-to("large") {
+			flex-wrap: wrap;
 		}
 
-		.article--2col__col2 {
-			width: calc(100% - 34% - 12px); //TODO: how to fix 12px into rem?
-
-			@include respond-to("medium") {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between; 
-			}
+		@include respond-to("medium") {
+			flex-wrap: nowrap;
 		}
 
-		&__description {
-			line-height: remCalc(30px);
+		@include respond-to("small") {
+			padding: remCalc(15px) remCalc(10px);
 		}
 
 		&::before {
@@ -1073,13 +1072,61 @@
 				top: 0%;
 				right: 0%;
 
-				z-index: $zIndexThree;
+				z-index: 99999;
 
 				content: "";
 				color: $secondaryColorOne;
 				width: 85%;
 				min-height: remCalc(2px);
 		}
+
+		.article--2col__col1 {
+			width: 34%;
+			margin-right: remCalc(12px);
+
+			@include respond-to("large") {
+				width: 100%;
+
+				margin: 0;
+				margin-bottom: remCalc(10px);
+			}
+
+			@include respond-to("medium") {
+				width: 34%;
+				margin: 0;
+				margin-right: remCalc(12px);
+			}
+
+		}
+
+		.article--2col__col2 {
+			width: calc(100% - 34% - 12px); //TODO: how to fix 12px into rem?
+
+			@include respond-to("large") {
+				width: 100%;
+			}
+
+			@include respond-to("medium") {
+				width: calc(100% - 34% - 12px); //TODO: how to fix 12px into rem?
+			}
+
+
+		}
+
+		&__description {
+			line-height: remCalc(30px);
+
+			@include respond-to("large") {
+				margin-bottom: remCalc(20px);
+
+				line-height: remCalc(25px);
+			}
+
+			@include respond-to("small") {
+				line-height: remCalc(20px);
+			}
+		}
+
 
 		&__author {
 			@include font('heading',400,italic);
@@ -1089,6 +1136,10 @@
 			strong {
 				font-weight: $boldWeight;
 				color: $primaryColorOne;
+			}
+
+			@include respond-to("small") {
+				font-size: remCalc(16px);
 			}
 		}
 

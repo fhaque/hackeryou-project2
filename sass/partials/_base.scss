@@ -83,7 +83,7 @@ address {
 .wrapper {
 	width: 100%;
 	max-width: $wrapperWidth;
-	padding: 0;
+	padding: 0 remCalc(5px);
 	margin: 0 auto;
 
 	overflow: hidden;
