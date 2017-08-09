@@ -131,6 +131,10 @@
 	&__icon {
 		&:hover {
 			color: $primaryColorOne;
+
+			@include respond-to("medium") {
+				color: $secondaryColorOne;
+			}
 		}
 
 		&--topHeadline {
