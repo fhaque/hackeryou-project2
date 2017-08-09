@@ -16,6 +16,26 @@
 //for wow animations from WOW.js library.
 .wow { visibility: hidden; }
 
+.positionFixable {
+	position: fixed;
+	width: 100%;
+
+	border-bottom: 1px solid $detailsBorderColor;
+	box-shadow: 0 6px 5px -5px transparentize(#000, 0.9);
+
+	background-color: $secondaryColorTwo;
+	& > * {
+		background-color: $secondaryColorTwo;
+	}
+	
+	z-index: $zIndexInfinite;
+	@include respond-to("medium") {
+		position: static;
+		border: none;
+		box-shadow: none;
+	}
+}
+
 .topHeadline {
 	@include respond-to("medium") {
 		position: fixed;
@@ -301,7 +321,7 @@
 			
 			box-shadow: 0px 0px 7.92px 0.08px rgba(0, 0, 0, 0.1);
 
-			transition: all 0.5s;
+			transition: all 0.3s;
 
 			&:hover {
 				color: $secondaryColorTwo;

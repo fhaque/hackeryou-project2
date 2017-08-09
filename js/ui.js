@@ -76,8 +76,7 @@ const enlargeableAnimationDuration = 300;
 
 $('.enlargeable_image__zoomTarget').click(function(e) {
 	const image_src = $(this).closest('.enlargeable_image').find('img').attr('src');
-	console.log(`url(../${image_src})`);
-	$('.gallery__blownImage').css('background-image', `url(../${image_src})`);
+	$('.gallery__blownImage').css('background-image', `url(${image_src})`);
 	$('.gallery__blownImage').fadeIn(enlargeableAnimationDuration);
 
 });
