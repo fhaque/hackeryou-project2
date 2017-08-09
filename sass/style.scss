@@ -5,8 +5,19 @@
 @import 'partials/base';
 @import 'partials/header';
 
+.wow { visibility: hidden; }
 
 .topHeadline {
+	@include respond-to("medium") {
+		position: fixed;
+		width: 100%;
+
+		z-index: $zIndexThree;
+
+		background-color: $secondaryColorTwo;
+		border-bottom: 1px solid $detailsBorderColor;
+		box-shadow: 0 6px 5px -5px transparentize(#000, 0.9);
+	}
 
 	&__content {
 		display: flex;
@@ -15,15 +26,6 @@
 		align-content: center;
 
 		padding: remCalc(32px) 0;
-	}
-
-	@include respond-to("medium") {
-		position: fixed;
-		width: 100%;
-
-		z-index: $zIndexThree;
-
-		background-color: $secondaryColorTwo;
 	}
 
 	&__announcement {
@@ -51,6 +53,15 @@
 	color: $primaryColorOne;
 	font-size: remCalc(25px);
 
+	transition: all 0.3s;
+
+	&:hover {
+		color: $secondaryColorTwo;
+		background-color: $primaryColorOne;
+		box-shadow: 0px 0px 7.92px 0.08px rgba(0, 0, 0, 0.1);
+		transform: scale(1.05,1.05);
+	}
+
 	@include respond-to("medium") {
 		display: block;
 	}
@@ -68,7 +79,7 @@
 		justify-content: space-between;
 
 		width: percentOfWrapper(378px);
-		min-width: remCalc(378px);
+		min-width: remCalc(400px);
 
 		margin-right: remCalc(60px);
 
@@ -81,11 +92,25 @@
 		@include respond-to("medium") {
 			display: none;
 		}
+
+		&::before {
+			content: "\f0e0";
+			padding-right: remCalc(4px);
+			font-family: FontAwesome;
+			font-size: remCalc(12px);
+		}
 	}
 
 	&__phone {
 		@include respond-to("small") {
 			display: none;
+		}
+
+		&::before {
+			content: "\f095";
+			padding-right: remCalc(4px);
+			font-family: FontAwesome;
+			font-size: remCalc(12px);
 		}
 	}
 }
@@ -95,9 +120,17 @@
 	justify-content: space-between;
 
 	&__icon {
+		&:hover {
+			color: $primaryColorOne;
+		}
+
 		&--topHeadline {
 			text-decoration: none;
 			color: $secondaryColorOne;
+
+			&:hover {
+				text-shadow: 2px 2px 8px transparentize($secondaryColorOne, 0.5);
+			}	
 
 			@include respond-to("medium") {
 				display: none;
@@ -135,6 +168,8 @@
 
 	padding: remCalc(32px) 0;
 
+	transition: all 0.3s;
+
 	@include respond-to("large") {
 		padding: remCalc(16px) 0;
 	}
@@ -147,7 +182,7 @@
 		width: remCalc(400px);
 		min-height: 100vh;
 		top: 0;
-		right: 100%;
+		right: -100%;
 
 		z-index: $zIndexFour; 
 
@@ -324,7 +359,11 @@
 			img {
 				z-index: $zIndexOne;
 				filter: brightness(50%);
-				border: 2px solid $primaryColorOne;
+				// border: 2px solid $primaryColorOne;
+				position: relative;
+				left: remCalc(-1 * $wrapperSidePadding);
+				width: 100vw;
+				box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
 			}
 		}
 
@@ -439,6 +478,7 @@
 			@include respond-to("small") {
 				position: static;
 				color: $primaryColorTwo;
+				width: 100%;
 			}
 		}
 
@@ -467,7 +507,7 @@
 			}
 
 			@include respond-to("small") {
-				padding: remCalc(20px);
+				padding: remCalc(25px);
 			}
 		}
 	}
@@ -501,6 +541,14 @@
 			
 			box-shadow: 0px 0px 7.92px 0.08px rgba(0, 0, 0, 0.1);
 
+			transition: all 0.5s;
+
+			&:hover {
+				color: $secondaryColorTwo;
+				background-color: $secondaryColorOne;
+				transform: scale(1.05,1.05);
+			}
+
 			&::-webkit-details-marker {
 	  			display: none
 			}
@@ -527,7 +575,7 @@
 			}
 
 			@include respond-to("small") {
-				padding: remCalc(20px);
+				padding: remCalc(25px);
 				color: $primaryColorTwo;
 			}
 		}
@@ -591,11 +639,18 @@
 	& > .button {
 		margin-top: remCalc(74px);
 		min-width: remCalc(240px);
+
 	}
 }
 
 .card {
 	background-color: $secondaryColorTwo;
+	transition: all 0.3s;
+
+	&:hover {
+		box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
+		transform: scale(1.02,1.02);
+	}
 
 	@include respond-to("medium") {
 		display: flex;
@@ -690,10 +745,11 @@
 	&--news {
 		position: relative;
 
+
 		&__topTitle {
 			position: absolute;
 			left: 75%;
-			transform: translateY(-50%);
+			transform: translateY(-100%);
 
 			text-align: center;
 			color: $secondaryColorTwo;
@@ -714,6 +770,7 @@
 			}
 
 			@include respond-to("medium") {
+				transform: translateY(-50%);
 				left: 85%;
 			}
 		}
@@ -732,6 +789,10 @@
 		}
 
 		&__content {
+
+			padding-bottom: remCalc(20px);
+			padding-left: remCalc(10px); 
+
 			@include respond-to("medium") {
 				position: absolute;
 				left: 50%;
@@ -756,10 +817,12 @@
 			margin-bottom: remCalc(16px) - remCalc(24px) / 2;
 			font-size: remCalc(12px);
 			line-height: remCalc(24px);
+
 		}
 	}
 
 	&--teacher {
+
 		@include respond-to("medium") {
 			position: relative;
 			
@@ -804,6 +867,9 @@
 		}
 
 		&__content {
+			padding-left: remCalc(10px);
+			padding-bottom: remCalc(10px);
+
 			@include respond-to("medium") {
 				display: flex;
 				flex-direction: column;
@@ -839,6 +905,10 @@
 			width: 75%;
 
 			text-transform: uppercase;
+
+			@include respond-to("large") {
+				width: 100%;
+			}
 
 			@include respond-to("medium") {
 				width: 60%;
@@ -886,6 +956,10 @@
 
 	&--course {
 		box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
+
+		&:hover {
+			box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.2);
+		}
 
 		@include respond-to("medium") {
 			position: relative;
@@ -953,6 +1027,14 @@
 
 		.button {
 			margin: 0;
+			border: 1px solid $secondaryColorOne;
+
+			&:hover {
+				color: $secondaryColorOne;
+				background-color: $secondaryColorTwo;
+
+
+			}
 
 			&::after {
 				margin-left: remCalc(3px);
@@ -971,6 +1053,12 @@
 
 				font-size: remCalc(12px);
 			}
+
+			@include respond-to("small") {
+				padding-bottom: remCalc(18px);
+				padding-top: remCalc(18px);
+				width: 60%;
+			}
 		}
 	}
 
@@ -985,7 +1073,11 @@
 		}
 
 		&--highlighted {
-			box-shadow: 0px 0px 28.13px 0.87px transparentize($secondaryColorOne, 0.5);
+			box-shadow: 0px 0px 28.13px 0.87px transparentize($secondaryColorOne, 0.7);
+
+			&:hover {
+				box-shadow: 0px 0px 28.13px 0.87px transparentize($secondaryColorOne, 0.5);
+			}
 		}
 
 		&__header {
@@ -1004,6 +1096,10 @@
 			margin-top: 20px;
 			text-align: center;
 			font-size: remCalc(24px);
+
+			@include respond-to("small") {
+				font-size: remCalc(21px);
+			}
 		}
 
 		&__subTitle {
@@ -1018,10 +1114,18 @@
 		&__priceAmount {
 			margin-bottom: remCalc(18px);
 			font-size: remCalc(18px);
+
+			@include respond-to("small") {
+				font-size: remCalc(20px);
+			}
 		}
 
 		&__priceDays {
 			font-size: remCalc(24px);
+
+			@include respond-to("small") {
+				font-size: remCalc(22px);
+			}
 		}
 
 		&__descriptionContainer {
@@ -1070,6 +1174,10 @@
 
 			&:hover {
 				color: $secondaryColorOne;
+				background-color: $secondaryColorTwo;
+				box-shadow: 0px 0px 7.92px 0.08px rgba(0, 0, 0, 0.1);
+				text-shadow: none;
+				transform: none;
 			}
 
 			@include respond-to("medium") {
@@ -1180,21 +1288,45 @@
 	}
 }
 
-a.card {
+a.card--service {
 	display: block;
 
-	padding: 0;
+	padding: 0 remCalc(10px);
 	margin: 0;
+
+	padding-bottom: remCalc(30px);
+
+	&:hover {
+		transform: scale(1.02,1.02);
+		text-decoration: none;
+	}
 
 	@include respond-to("medium") {
 		display: flex;
 		justify-content: space-between;
 
 		margin-bottom: remCalc(20px);
+		padding: 0;
 	}
 }
 
 .gallery {
+	&__blownImage {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: black;
+
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		z-index: $zIndexInfinite;
+	}
+
 	img {
 		display: block;
 		width: 100%;
@@ -1409,14 +1541,30 @@ a.card {
 		padding-left: 10%;
 		border: none;
 		border-right: 1px solid $secondaryColorTwo;
+
+		border-top-left-radius: 5000px;
+		border-bottom-left-radius: 5000px;
+
+		&:focus {
+			outline: none;
+			box-shadow: inset 0 0 10px $secondaryColorTwo;
+		}
+
 	}
 
 	&__submit.button--form {
 		margin: 0;
 		padding-left: remCalc(10px);
 		border: none;
+		border-radius: 0;
 
 		width: 30%;
+
+		&:hover {
+			box-shadow: none;
+			color: $secondaryColorOne;
+			background-color: $secondaryColorTwo;
+		}
 
 		span::before {
 			padding-right: remCalc(16px);
@@ -1466,6 +1614,11 @@ a.card {
 		color: $primaryColorTwo;
 		font-size: remCalc(20px);
 
+		&:focus {
+			outline: none;
+			box-shadow: inset 0 0 10px $secondaryColorOne;
+		}
+
 		&::placeholder {
 			@include font('normal', 400);
 			color: $primaryColorTwo;
@@ -1512,6 +1665,11 @@ a.card {
 		font-size: remCalc(20px);
 
 		resize: none;
+
+		&:focus {
+			outline: none;
+			box-shadow: inset 0 0 10px $secondaryColorOne;
+		}
 	}
 
 	button {
@@ -1684,6 +1842,10 @@ footer {
 			flex-wrap: wrap;
 		}
 
+		@include respond-to("small") {
+			justify-content: space-between;
+		}
+
 		&__item {
 			display: flex;
 			justify-content: flex-start;
@@ -1706,8 +1868,8 @@ footer {
 					font-size: remCalc(16px);
 				}
 
-				@include respond-to("small") {
-					font-size: remCalc(14px);
+				@include respond-to("medium") {
+					font-size: remCalc(16px);
 				}
 			}
 

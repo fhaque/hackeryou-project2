@@ -9,6 +9,7 @@
 
 	&--hero {
 		color: $secondaryColorTwo;
+		z-index: $zIndexTwo;
 
 		& > * {
 			text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
@@ -54,6 +55,10 @@
 			color: $secondaryColorTwo;
 			border-color: $secondaryColorTwo;
 			text-transform: uppercase;
+
+			&:hover {
+				border: 1px solid transparent;
+			}
 		}
 	}
 

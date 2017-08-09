@@ -37,6 +37,10 @@ ul, ol {
 
 a, a:visited {
 	text-decoration: none;
+
+	&:hover:not(.button):not(.card):not(.more_info_link):not(.navBar__link) {
+		text-decoration: underline;
+	}
 }
 
 section {
@@ -66,6 +70,12 @@ section {
 	// }
 }
 
+.section {
+	&--about {
+		position: relative;
+	}
+}
+
 address {
 	&.bottomDivider {
 		border-bottom: 1px solid $footerBorderColor;
@@ -83,7 +93,7 @@ address {
 .wrapper {
 	width: 100%;
 	max-width: $wrapperWidth;
-	padding: 0 remCalc(5px);
+	padding: 0 remCalc($wrapperSidePadding);
 	margin: 0 auto;
 
 	// overflow: hidden;
@@ -130,16 +140,39 @@ address {
 	font-size: remCalc(18px);
 	text-transform: uppercase;
 
+	transition: all 0.3s;
+
+	&:hover {
+		box-shadow: 0px 0px 7.92px 0.08px rgba(0, 0, 0, 0.3);
+		color: $secondaryColorTwo;
+		background-color: $secondaryColorOne;
+		text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+		transform: scale(1.05,1.05);
+	}
+
 	&--highlighted {
 		color: $secondaryColorTwo;
 		background-color: $secondaryColorOne;
-		border: none;
+		border: 1px solid $secondaryColorOne;
+
+		&:hover {
+			color: $secondaryColorOne;
+			background-color: $secondaryColorTwo;
+			border: 1px solid $secondaryColorOne;
+
+		}
 	}
 	
 	&--dark {
 		color: $secondaryColorTwo;
 		background-color: $primaryColorFour;
-		border: none;
+		border: 1px solid $primaryColorFour;
+
+		&:hover {
+			color: $primaryColorFour;
+			background-color: $secondaryColorTwo;
+			border: 1px solid $primaryColorFour;
+		}
 	}
 
 	&--card {
@@ -164,13 +197,25 @@ a.button {
 	display: block;
 }
 
-.more_info_link {
+a.more_info_link {
 	color: $secondaryColorOne;
 	font-size: remCalc(14px);
 	text-transform: lowercase;
+
+	&:hover {
+		text-decoration: none;
+		text-shadow: 2px 2px 8px transparentize($secondaryColorOne, 0.5);
+	}
+
 	&::after {
-		font-family: FontAwesome;
 		margin-left: remCalc(6px);
+
+		font-family: FontAwesome;
 		content: '\f178';
+
+	}
+
+	@include respond-to("small") {
+		font-size: remCalc(16px);
 	}
 }

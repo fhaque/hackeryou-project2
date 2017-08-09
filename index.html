@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Univers</title>
 	<link rel="stylesheet" type="text/css" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
 		/** {
@@ -74,7 +75,7 @@
 <!-- ##main## -->
 	<main>
 <!-- ##about_us## -->
-		<section class="bottomDivider">
+		<section class="bottomDivider section--about">
 			<div class="wrapper">
 			
 				<header class="header header--section">
@@ -539,90 +540,92 @@
 				
 				<div class="gallery">
 					<div class="gallery__filterButtons">
-						<button class="gallery__filterButton gallery__filterButton--highlighted button">All</button>
-						<button class="gallery__filterButton button">Photo</button>
-						<button class="gallery__filterButton button">Campus</button>
-						<button class="gallery__filterButton button">Student</button>
+						<button class="gallery__filterButton gallery__filterButton--all gallery__filterButton--highlighted button">All</button>
+						<button class="gallery__filterButton gallery__filterButton--photo button">Photo</button>
+						<button class="gallery__filterButton gallery__filterButton--campus button">Campus</button>
+						<button class="gallery__filterButton gallery__filterButton--student button">Student</button>
 					</div>
+
+					<div class="gallery__blownImage"></div>
 					
 					<ul class="gallery__items">
-						<li class="gallery__item enlargeable_image">
+						<li class="gallery__item enlargeable_image gallery__item--student">
 								<img src="assets/images/smartphonegal.png" alt="smartphone being used." class="enlargeable_image__image">
 								<div class="enlargeable_image__overlay">
 									<ul class="enlargeable_image__icons">
-										<li class="enlargeable_image__icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="enlargeable_image__icon enlargeable_image__zoomTarget"><i class="fa fa-search" aria-hidden="true"></i></li>
 										<li class="enlargeable_image__icon"><i class="fa fa-eye" aria-hidden="true"></i></li>
 									</ul>
 								</div>
 						</li>
-						<li class="gallery__item enlargeable_image">
+						<li class="gallery__item enlargeable_image gallery__item--photo">
 							<img src="assets/images/notebookgal.png" alt="notebook" class="enlargeable_image__image">
 							<div class="enlargeable_image__overlay">
 									<ul class="enlargeable_image__icons">
-										<li class="enlargeable_image__icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="enlargeable_image__icon enlargeable_image__zoomTarget"><i class="fa fa-search" aria-hidden="true"></i></li>
 										<li class="enlargeable_image__icon"><i class="fa fa-eye" aria-hidden="true"></i></li>
 									</ul>
 								</div>
 						</li>
-						<li class="gallery__item enlargeable_image">
+						<li class="gallery__item enlargeable_image gallery__item--student">
 							<img src="assets/images/lookinggal.png" alt="Someone looking at wall" class="enlargeable_image__image">
 							<div class="enlargeable_image__overlay">
 									<ul class="enlargeable_image__icons">
-										<li class="enlargeable_image__icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="enlargeable_image__icon enlargeable_image__zoomTarget"><i class="fa fa-search" aria-hidden="true"></i></li>
 										<li class="enlargeable_image__icon"><i class="fa fa-eye" aria-hidden="true"></i></li>
 									</ul>
 								</div>
 						</li>
-						<li class="gallery__item enlargeable_image">
+						<li class="gallery__item enlargeable_image gallery__item--photo">
 							<img src="assets/images/writinggal.png" alt="Someone writing" class="enlargeable_image__image">
 							<div class="enlargeable_image__overlay">
 									<ul class="enlargeable_image__icons">
-										<li class="enlargeable_image__icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="enlargeable_image__icon enlargeable_image__zoomTarget"><i class="fa fa-search" aria-hidden="true"></i></li>
 										<li class="enlargeable_image__icon"><i class="fa fa-eye" aria-hidden="true"></i></li>
 									</ul>
 								</div>
 						</li>
-						<li class="gallery__item enlargeable_image">
+						<li class="gallery__item enlargeable_image gallery__item--photo">
 							<img src="assets/images/laptopgal.png" alt="laptop" class="enlargeable_image__image">
 							<div class="enlargeable_image__overlay">
 									<ul class="enlargeable_image__icons">
-										<li class="enlargeable_image__icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="enlargeable_image__icon enlargeable_image__zoomTarget"><i class="fa fa-search" aria-hidden="true"></i></li>
 										<li class="enlargeable_image__icon"><i class="fa fa-eye" aria-hidden="true"></i></li>
 									</ul>
 								</div>
 						</li>
-						<li class="gallery__item enlargeable_image">
-							<img src="assets/images/writinggal.png" alt="someone writing" class="enlargeable_image__image">
+						<li class="gallery__item enlargeable_image gallery__item--campus">
+							<img src="assets/images/reading.png" alt="someone writing" class="enlargeable_image__image">
 							<div class="enlargeable_image__overlay">
 									<ul class="enlargeable_image__icons">
-										<li class="enlargeable_image__icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="enlargeable_image__icon enlargeable_image__zoomTarget"><i class="fa fa-search" aria-hidden="true"></i></li>
 										<li class="enlargeable_image__icon"><i class="fa fa-eye" aria-hidden="true"></i></li>
 									</ul>
 								</div>
 						</li>
-						<li class="gallery__item enlargeable_image">
+						<li class="gallery__item enlargeable_image gallery__item--student">
 							<img src="assets/images/headgal.png" alt="someone studying" class="enlargeable_image__image">
 							<div class="enlargeable_image__overlay">
 									<ul class="enlargeable_image__icons">
-										<li class="enlargeable_image__icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="enlargeable_image__icon enlargeable_image__zoomTarget"><i class="fa fa-search" aria-hidden="true"></i></li>
 										<li class="enlargeable_image__icon"><i class="fa fa-eye" aria-hidden="true"></i></li>
 									</ul>
 								</div>
 						</li>
-						<li class="gallery__item enlargeable_image">
+						<li class="gallery__item enlargeable_image gallery__item--photo">
 							<img src="assets/images/notegal.png" alt="notebook" class="enlargeable_image__image">
 							<div class="enlargeable_image__overlay">
 									<ul class="enlargeable_image__icons">
-										<li class="enlargeable_image__icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="enlargeable_image__icon enlargeable_image__zoomTarget"><i class="fa fa-search" aria-hidden="true"></i></li>
 										<li class="enlargeable_image__icon"><i class="fa fa-eye" aria-hidden="true"></i></li>
 									</ul>
 								</div>
 						</li>
-						<li class="gallery__item enlargeable_image">
+						<li class="gallery__item enlargeable_image gallery__item--campus">
 							<img src="assets/images/blackgal.png" alt="someone outside" class="enlargeable_image__image">
 							<div class="enlargeable_image__overlay">
 									<ul class="enlargeable_image__icons">
-										<li class="enlargeable_image__icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+										<li class="enlargeable_image__icon enlargeable_image__zoomTarget"><i class="fa fa-search" aria-hidden="true"></i></li>
 										<li class="enlargeable_image__icon"><i class="fa fa-eye" aria-hidden="true"></i></li>
 									</ul>
 								</div>
@@ -779,6 +782,7 @@
 		<p class="footer__copyright">Copyright &#169; Univers. All rights reserved.</p>
 	</footer>
 </body>
-<script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="lib/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="lib/js/wow.min.js"></script>
 <script type="text/javascript" src="js/ui.js"></script>
 </html>
