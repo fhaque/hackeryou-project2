@@ -1,0 +1,80 @@
+.gallery {
+	&__blownImage {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: black;
+
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		z-index: $zIndexInfinite;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+	&__items {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		margin-bottom: remCalc(62px);
+	}
+	&__item {
+		width: 33.33%;
+
+		@include respond-to("small") {
+			width: 50%;
+		}
+	}
+
+	&__filterButtons {
+		display: flex;
+		justify-content: center;
+		align-content: space-between;
+		flex-wrap: wrap;
+
+		margin: 0 auto;
+		margin-bottom: remCalc(47px);
+
+		& > * {
+			margin: 0 remCalc(5px);
+			max-width: percentOfWrapper(145px);
+			flex: 1; 
+		}
+	}
+
+	&__filterButton.button {
+		min-width: remCalc(127px);
+		padding: remCalc(12px) remCalc(18px);
+		margin-bottom: remCalc(10px);
+
+		@include font('text', 400);
+		color: $primaryColorOne;
+		font-size: remCalc(24px);
+		background-color: $primaryColorThree;
+		border-radius: 0;
+		border: none;
+		text-transform: capitalize;
+	}
+
+	&__filterButton {
+		&--highlighted.button {
+			padding: remCalc(14px) remCalc(18px);
+			@include font();
+			font-size: remCalc(24px);
+			color: $secondaryColorTwo;
+			background-color: $secondaryColorOne;
+		}
+	}
+
+	& > .button {
+		min-width: remCalc(213px);
+	}
+}

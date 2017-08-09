@@ -1,0 +1,148 @@
+.addressList {
+	&--large {
+		@include respond-to("medium") {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-wrap: wrap;
+		}
+
+		@include respond-to("small") {
+			justify-content: space-between;
+		}
+
+		&__item {
+			display: flex;
+			justify-content: flex-start;
+
+			margin-bottom: remCalc(45px);
+
+			@include respond-to("medium") {
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+
+				width: 45%;
+			}
+
+			p {
+				font-size: remCalc(22px);
+				line-height: remCalc(24px);
+
+				@include respond-to("large") {
+					font-size: remCalc(16px);
+				}
+
+				@include respond-to("medium") {
+					font-size: remCalc(16px);
+				}
+			}
+
+			&::before { //Fatin: Needs cleanup/refactoring
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				flex-grow: 0;
+				flex-shrink: 0;
+				position: relative;
+				transform: translateY(-10%);
+				margin-right: remCalc(35px);
+
+				width: remCalc(50px);
+				min-height: remCalc(50px);
+				max-height: remCalc(50px);
+
+				font-family: FontAwesome;
+				font-size: remCalc(22px);
+
+				color: $secondaryColorTwo;
+				background-color: $secondaryColorOne;
+				border-radius: 100%;
+
+				@include respond-to("large") {
+					font-size: remCalc(18px);
+
+					width: remCalc(30px);
+					min-height: remCalc(30px);
+					max-height: remCalc(30px);
+					margin-right: remCalc(20px);
+				}
+
+				@include respond-to("medium") {
+					width: remCalc(70px);
+					min-height: remCalc(70px);
+					max-height: remCalc(70px);
+				}
+			}
+
+			&--location {
+				&::before {
+					content: "\f041";
+				}
+			}
+
+			&--phone {
+				&::before {
+					content: "\f095";
+				}
+			}
+
+			&--email {
+				&::before {
+					content: "\f003";
+				}
+			}
+
+		}
+	}
+	&--footer {
+		display: flex;
+		justify-content: center;
+
+		@include respond-to("medium") {
+			flex-wrap: wrap;
+		}
+		
+		&__item {
+			display: block;
+			margin: 0 remCalc(10px);
+
+			@include font('text', $normalWeight);
+
+			font-size: remCalc(16px);
+			color: $secondaryColorTwo;
+
+			@include respond-to("medium") {
+				margin: remCalc(10px);
+			}
+
+			&::before {
+				color: $secondaryColorOne;
+				margin-right: remCalc(8px);
+
+				font-family: FontAwesome;
+				font-style: normal;
+			}
+
+			&--hotline {
+				&::before {
+					content: "\f10b";
+				}
+			}
+
+			&--email {
+				&::before {
+					content: "\f003";
+				}
+			}
+
+			&--location {
+				&::before {
+					content: "\f041";
+				}
+			}
+		}
+	}
+}
+

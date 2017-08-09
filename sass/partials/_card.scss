@@ -1,0 +1,680 @@
+.card {
+	background-color: $secondaryColorTwo;
+	transition: all 0.3s;
+
+	&:hover {
+		box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
+		transform: scale(1.02,1.02);
+	}
+
+	@include respond-to("medium") {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+
+		margin-bottom: remCalc(20px);
+	}
+
+	img {
+		display: block;
+		width: 100%;
+
+		margin: 0 auto;
+	}
+
+	&__subTitle {
+		@include font('normal', 400);
+			background-color: $primaryColorThree;
+		p {
+			color: $primaryColorOne;
+			background-color: $primaryColorThree;
+		}
+		
+
+		&--price {
+			text-align: center;
+		}
+	}
+
+	&__description {
+		font-size: remCalc(14px);
+		line-height: remCalc(24px);
+
+		@include respond-to("medium") {
+			text-align: left;
+		}
+	}
+
+	&--highlighted {
+		&__subTitle {
+				background-color: $secondaryColorOne;
+			p {
+				background-color: $secondaryColorOne;
+				color: $secondaryColorTwo;
+			}
+		}
+	}
+//SERVICE CARD -------------------------------------------//
+//SERVICE CARD -------------------------------------------//
+//SERVICE CARD -------------------------------------------//
+
+	&--service {
+		text-align: center;
+		
+	
+		&__title {
+			text-align: center;
+			margin-bottom: remCalc(30px);
+
+			@include respond-to("medium") {
+				text-align: left;
+				margin-bottom: remCalc(10px);
+			}
+		}
+
+		img {
+			width: 42%;
+			margin-bottom: remCalc(50px);
+
+			@include respond-to("medium") {
+				width: 30%;
+				margin: 0;
+				flex: 1;
+			}
+		}
+
+		.card__content {
+			@include respond-to("medium") {
+				min-width: 70%;
+				flex: 1;
+				margin: 0;
+				padding-top: 4%;
+				padding-left: 2%;
+			}
+
+			@include respond-to("small") {
+				padding-top: 2%;
+			}
+		}
+
+	}
+
+//NEWS CARD -------------------------------------------//
+//NEWS CARD -------------------------------------------//
+//NEWS CARD -------------------------------------------//
+
+	&--news {
+		position: relative;
+
+
+		&__topTitle {
+			position: absolute;
+			left: 75%;
+			transform: translateY(-100%);
+
+			text-align: center;
+			color: $secondaryColorTwo;
+			font-size: remCalc(14px);
+			line-height: remCalc(24px);
+
+			&::after {
+				position: absolute;
+				transform: translate(-70%,-50%);
+
+				z-index:-1;
+
+				content: "";
+				width: remCalc(63px);
+				height: remCalc(63px);
+				background-color: $secondaryColorOne;
+
+			}
+
+			@include respond-to("medium") {
+				transform: translateY(-50%);
+				left: 85%;
+			}
+		}
+
+		&__title {
+			width: 65%;
+			margin-top: remCalc(27px);
+			margin-bottom: remCalc(23px);
+
+			font-size: remCalc(14px);
+			line-height: remCalc(16px);
+
+			@include respond-to("medium") {
+				margin-top: 0;
+			}
+		}
+
+		&__content {
+
+			padding-bottom: remCalc(20px);
+			padding-left: remCalc(10px); 
+
+			@include respond-to("medium") {
+				position: absolute;
+				left: 50%;
+				bottom: 5%;
+				transform: translateX(-50%);
+
+				width: 100%;
+				max-height: 80%;
+				padding: 2%;
+			
+				background-color: transparentize($secondaryColorTwo, 0.1);
+				box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.7);
+
+				&:hover {
+					background-color: $secondaryColorTwo;
+				}
+			}
+		}
+
+		&__description {
+			width: 80%;
+			margin-bottom: remCalc(16px) - remCalc(24px) / 2;
+			font-size: remCalc(12px);
+			line-height: remCalc(24px);
+
+		}
+	}
+
+//TEACHER CARD -------------------------------------------//
+//TEACHER CARD -------------------------------------------//
+//TEACHER CARD -------------------------------------------//
+
+	&--teacher {
+
+		@include respond-to("medium") {
+			position: relative;
+			
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		&__title {
+			margin-top: remCalc(40px);
+			margin-bottom: remCalc(20px);
+
+			font-size: remCalc(25px);
+			text-transform: uppercase;
+
+			@include respond-to("medium") {
+				margin-top: 2%;
+				margin-bottom: remCalc(5px);
+				color: $secondaryColorTwo;
+				text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+			}
+
+			@include respond-to("small") {
+				font-size: remCalc(20px);
+				
+			}
+		}
+
+		&__subTitle {
+			margin-bottom: remCalc(30px);
+
+			font-weight: $boldWeight;
+			font-size: remCalc(18px);
+			color: $secondaryColorOne;
+			background-color: transparent;
+
+			@include respond-to("medium") {
+				margin: 2% 0;
+				text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+			}
+		}
+
+		&__content {
+			padding-left: remCalc(10px);
+			padding-bottom: remCalc(10px);
+
+			@include respond-to("medium") {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+
+				width: 100%;
+				min-height: 100%;
+				padding: 2%;
+			
+				background-color: transparent;
+
+				&:hover {
+					background-color: transparentize($primaryColorOne, 0.1);
+				}
+			}
+		}
+
+		&__contact {
+			display: flex;
+			align-items: baseline;
+
+			width: 75%;
+
+			text-transform: uppercase;
+
+			@include respond-to("large") {
+				width: 100%;
+			}
+
+			@include respond-to("medium") {
+				width: 60%;
+			}
+
+			@include respond-to("small") {
+				width: 80%;
+			}
+
+			p:first-child {
+				flex-shrink: 0;
+				width: 70%;
+				font-size: remCalc(18px);
+
+				@include respond-to("medium") {
+					display: none;
+					width: 60%;
+					padding-right: remCalc(10px);
+
+					text-align: right;
+					color: $secondaryColorTwo;
+					font-size: remCalc(14px);
+					text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+				}
+			}
+
+			.socialMediaIcons--teacher {
+				width: 30%;
+				flex: 1;
+			}
+			
+			.socialMediaIcons--teacher__icon {
+				@include respond-to("medium") {
+					color: $secondaryColorTwo;
+					font-size: remCalc(30px);
+					text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+				}
+
+				@include respond-to("small") {
+					font-size: remCalc(30px);
+				}
+			}
+		}
+	}
+
+//COURSE CARD -------------------------------------------//
+//COURSE CARD -------------------------------------------//
+//COURSE CARD -------------------------------------------//
+
+	&--course {
+		box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
+
+		&:hover {
+			box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.2);
+		}
+
+		@include respond-to("medium") {
+			position: relative;
+		}
+
+		&__topTitle {
+			margin-bottom: remCalc(18px);
+			&::before {
+				margin-right: remCalc(9px);
+
+				content: "\f073";
+				font-family: FontAwesome;
+				font-size: remCalc(10px);
+				font-weight: $normalWeight;
+			}
+		}
+
+		&__title {
+			margin-bottom: remCalc(22px);
+
+			@include font('text', 400);
+			color: $primaryColorOne;
+			font-size: remCalc(14px);
+
+			@include respond-to("medium") {
+				font-size: remCalc(16px);
+			}
+		}
+
+		&__content {
+			padding: remCalc(30px);
+
+			@include respond-to("medium") {
+				position: absolute;
+				width: 50%;
+				max-height: 100%;
+				top: 5%;
+				right: 5%;
+				bottom: 5%;
+				
+				background-color: transparentize($secondaryColorTwo, 0.1);
+				box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.7);
+
+				&:hover {
+					background-color: $secondaryColorTwo;
+				}
+			}
+
+			@include respond-to("small") {
+				padding: remCalc(10px);
+			}
+		}
+
+		&__description {
+			font-size: remCalc(10px);
+			line-height: remCalc(18px);
+
+			margin-bottom: remCalc(17px);
+	
+			@include respond-to("medium") {
+				font-size: remCalc(12px);
+				line-height: remCalc(20px);
+			}
+		}
+
+		.button {
+			margin: 0;
+			border: 1px solid $secondaryColorOne;
+
+			&:hover {
+				color: $secondaryColorOne;
+				background-color: $secondaryColorTwo;
+
+
+			}
+
+			&::after {
+				margin-left: remCalc(3px);
+				content: "\f054";
+				font-family: FontAwesome;
+				font-size: remCalc(4px);
+			}
+
+			@include respond-to("medium") {
+				position: absolute;
+				bottom: 5%;
+				left: 50%;
+				transform: translateX(-50%);
+
+				width: 50%;
+
+				font-size: remCalc(12px);
+			}
+
+			@include respond-to("small") {
+				padding-bottom: remCalc(18px);
+				padding-top: remCalc(18px);
+				width: 60%;
+			}
+		}
+	}
+
+//PLAN CARD -------------------------------------------//
+//PLAN CARD -------------------------------------------//
+//PLAN CARD -------------------------------------------//
+
+	&--plan {
+		box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
+
+		@include respond-to("medium") {
+			position: relative;
+
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+
+		&--highlighted {
+			box-shadow: 0px 0px 28.13px 0.87px transparentize($secondaryColorOne, 0.7);
+
+			&:hover {
+				box-shadow: 0px 0px 28.13px 0.87px transparentize($secondaryColorOne, 0.5);
+			}
+		}
+
+		&__header {
+			@include respond-to("medium") {
+				width: 28%;
+				padding: 0;
+				margin:0;
+				margin-right: 2%;
+
+				border-right: 1px solid $detailsBorderColor;
+			}
+		}
+
+		&__title {
+			padding: remCalc(28px) 0;
+			margin-top: 20px;
+			text-align: center;
+			font-size: remCalc(24px);
+
+			@include respond-to("small") {
+				font-size: remCalc(21px);
+			}
+		}
+
+		&__subTitle {
+			padding: remCalc(28px) 0;
+			box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.2);
+
+			@include respond-to("medium") {
+				box-shadow: 0;
+			}
+		}
+
+		&__priceAmount {
+			margin-bottom: remCalc(18px);
+			font-size: remCalc(18px);
+
+			@include respond-to("small") {
+				font-size: remCalc(20px);
+			}
+		}
+
+		&__priceDays {
+			font-size: remCalc(24px);
+
+			@include respond-to("small") {
+				font-size: remCalc(22px);
+			}
+		}
+
+		&__descriptionContainer {
+			display: flex;
+			justify-content: center;
+
+			@include respond-to("medium") {
+				justify-content: flex-start;
+
+				padding: 0;
+				margin:0;
+				width: 70%;
+			}
+		}
+
+		&__description {
+			padding: remCalc(40px) 0;
+
+
+			@include font('text', 400);
+			font-size: remCalc(14px);
+			& li::before {
+				margin-right: remCalc(12px);
+				content: "\f00c";
+				color: $secondaryColorOne;
+				font-family: FontAwesome;
+				font-size: remCalc(14px);
+			}
+			
+			@include respond-to("medium") {
+				margin:0;
+				padding: 0;
+				padding-top: 2%;
+			}
+			
+		}
+
+		.button {
+			width: 100%;
+			border: none;
+			border-top: 1px solid $detailsBorderColor;
+			border-radius: 0;
+			@include font();
+			font-size: remCalc(14px);
+			text-transform: uppercase;
+
+			&:hover {
+				color: $secondaryColorOne;
+				background-color: $secondaryColorTwo;
+				box-shadow: 0px 0px 7.92px 0.08px rgba(0, 0, 0, 0.1);
+				text-shadow: none;
+				transform: none;
+			}
+		}
+		
+	}
+
+//TESTIMONIAL CARD -------------------------------------------//
+//TESTIMONIAL CARD -------------------------------------------//
+//TESTIMONIAL CARD -------------------------------------------//
+
+	&--testimonial {
+		position: relative;
+
+		width: 100%;
+		padding: remCalc(36px) remCalc(26px);
+
+		z-index: $zIndexTwo;
+
+		border: 1px solid $detailsBorderColor;
+
+		@include respond-to("large") {
+			flex-wrap: wrap;
+		}
+
+		@include respond-to("medium") {
+			flex-wrap: nowrap;
+		}
+
+		@include respond-to("small") {
+			padding: remCalc(15px) remCalc(10px);
+		}
+
+		&::before {
+				position: absolute;
+				top: 0%;
+				right: 0%;
+
+				z-index: 99999;
+
+				content: "";
+				background-color: $secondaryColorOne;
+				width: 85%;
+				min-height: remCalc(2px);
+		}
+
+		.article--2col__col1 {
+			width: 34%;
+			margin-right: remCalc(12px);
+
+			@include respond-to("large") {
+				width: 100%;
+
+				margin: 0;
+				margin-bottom: remCalc(10px);
+			}
+
+			@include respond-to("medium") {
+				width: 34%;
+				margin: 0;
+				margin-right: remCalc(12px);
+			}
+
+		}
+
+		.article--2col__col2 {
+			width: calc(100% - 34% - 12px); //Fatin: how to fix 12px into rem?
+
+			@include respond-to("large") {
+				width: 100%;
+			}
+
+			@include respond-to("medium") {
+				width: calc(100% - 34% - 12px); //Fatin: how to fix 12px into rem?
+			}
+
+
+		}
+
+		&__description {
+			line-height: remCalc(30px);
+
+			@include respond-to("large") {
+				margin-bottom: remCalc(20px);
+
+				line-height: remCalc(25px);
+			}
+
+			@include respond-to("small") {
+				line-height: remCalc(20px);
+			}
+		}
+
+
+		&__author {
+			@include font('heading',400,italic);
+			color: $primaryColorTwo;
+			font-size: remCalc(18px);
+
+			strong {
+				font-weight: $boldWeight;
+				color: $primaryColorOne;
+			}
+
+			@include respond-to("small") {
+				font-size: remCalc(16px);
+			}
+		}
+
+	}
+}
+
+//Fatin: For Service card only since it is an anchor card.
+//Need to find a way to integrate this to rest of card.
+a.card--service {
+	display: block;
+
+	padding: 0 remCalc(10px);
+	margin: 0;
+
+	padding-bottom: remCalc(30px);
+
+	&:hover {
+		transform: scale(1.02,1.02);
+		text-decoration: none;
+	}
+
+	@include respond-to("medium") {
+		display: flex;
+		justify-content: space-between;
+
+		margin-bottom: remCalc(20px);
+		padding: 0;
+	}
+}

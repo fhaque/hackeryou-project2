@@ -1,0 +1,141 @@
+.article--2col {
+	display: flex;
+	flex-wrap: nowrap;
+
+	&__col1,
+	&__col2 {
+		width: 50%;
+
+		img {
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		&--centerContent {
+			display: flex;
+			align-items: flex-start;
+			align-content: space-between;
+			flex-wrap: wrap;
+
+			p {
+				flex: 0 0 100%;
+			}
+		}
+	}
+}
+
+.article--about {
+	justify-content: space-between;
+
+	@include respond-to("medium") {
+		position: relative;
+	}
+
+	& > * {
+		width: 50% - percentOfWrapper(65px / 2);
+
+		@include respond-to("large") {
+			width: 50% - percentOfWrapper(25px / 2);
+		}
+	}
+
+	&__col1 {
+		@include respond-to("medium") {
+			position: absolute;
+			top:2%;
+			left: 2%;
+			bottom: 0;
+
+			z-index: $zIndexTwo;
+
+			width: 90%;
+			max-height: 100%;
+		}
+
+		@include respond-to("small") {
+			position: relative;
+			width: 100%;
+			top: 0%;
+			left: 0;
+			bottom: inherit;
+		}
+
+		p {
+			line-height: remCalc(24px);
+
+			@include respond-to("medium") {
+				color: $secondaryColorTwo;
+			}
+
+			@include respond-to("small") {
+				color: $primaryColorTwo;
+			}
+		}
+	}
+
+	&__col2 {
+		@include respond-to("medium") {
+			width: 100%;
+
+			img {
+				z-index: $zIndexOne;
+				filter: brightness(50%);
+
+				position: relative;
+				left: remCalc(-1 * $wrapperSidePadding);
+				width: 100vw;
+				box-shadow: 0px 0px 28.13px 0.87px rgba(0, 0, 0, 0.1);
+			}
+		}
+
+		@include respond-to("small") {
+			display: none;
+		}
+
+	}
+
+	.header__title {
+		@include respond-to("medium") {
+			color: $secondaryColorTwo;
+			margin-bottom: 0;
+		}
+
+		@include respond-to("small") {
+			color: $primaryColorOne;
+		}
+	}
+
+	.header {
+		@include respond-to("medium") {
+			margin-bottom: 3%;
+		}
+	}
+}
+
+.article--contactSubSections {
+	@include respond-to("medium") {
+		flex-direction: column-reverse;
+	}
+
+	.article--2col__col1 {
+		width: 70%;
+
+		@include respond-to("medium") {
+			width: 100%;
+			padding-top: 0;
+			padding: 0;
+			margin: 0 auto;
+		}
+	}
+
+	.article--2col__col2 {
+		width: 30%;
+
+		@include respond-to("medium") {
+			width: 100%;
+			padding-bottom: 0;
+			margin: 0 auto;
+		}
+	}
+}

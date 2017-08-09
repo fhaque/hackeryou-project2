@@ -1,0 +1,58 @@
+.cards {
+	&__items {
+		display: flex;
+		justify-content: space-between;
+
+		@include respond-to("medium") {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		width: (100%  - 2 * percentOfWrapper(50px)) / 3;
+		flex-shrink: 0;
+
+
+		@include respond-to("medium") {
+			width: 100%;
+		}
+	}
+
+	&--teacher {
+		@include respond-to("medium") {
+			&__items {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				margin: 0;
+			}
+
+			&__item {
+				max-width: 48%;
+				margin: 1%;
+			}
+		}	
+	}
+
+	&--testimonial {
+		&__item {
+			width: 50% - percentOfWrapper(20px);
+
+			@include respond-to("medium") {
+				width: 100%;
+			}
+		}
+	}
+
+	.buttons {
+		margin-top: remCalc(74px);
+	}
+
+	& > .button {
+		margin-top: remCalc(74px);
+		min-width: remCalc(240px);
+
+	}
+}

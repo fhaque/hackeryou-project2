@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,500i,700,700i');
 
 .html, body {
-	// font-size: 62.5%;
-	// font-size: $htmlFontSize;
 	line-height: 1;
 }
 
@@ -35,13 +33,7 @@ ul, ol {
 	list-style: none;
 }
 
-a, a:visited {
-	text-decoration: none;
 
-	&:hover:not(.button):not(.card):not(.more_info_link):not(.navBar__link) {
-		text-decoration: underline;
-	}
-}
 
 section {
 	padding: remCalc(125px) 0;
@@ -53,33 +45,22 @@ section {
 	@include respond-to("medium") {
 		padding: remCalc(75px) 0;
 	}
-
-	//TODO: For testing
-	// background-color: lightgreen;
-
-	// @include respond-to("large") {
-	// 	background-color: yellow;
-	// }
-
-	// @include respond-to("medium") {
-	// 	background-color: orange;
-	// }
-
-	// 	@include respond-to("small") {
-	// 	background-color: salmon;
-	// }
-}
-
-.section {
-	&--about {
-		position: relative;
-	}
 }
 
 address {
 	&.bottomDivider {
 		border-bottom: 1px solid $footerBorderColor;
 	}
+}
+
+
+
+//HELPER CLASSES------------------------------------//
+.wrapper {
+	width: 100%;
+	max-width: $wrapperWidth;
+	padding: 0 remCalc($wrapperSidePadding);
+	margin: 0 auto;
 }
 
 .tintedBackground {
@@ -90,20 +71,27 @@ address {
 	background-color: $secondaryColorOne;
 }
 
-.wrapper {
-	width: 100%;
-	max-width: $wrapperWidth;
-	padding: 0 remCalc($wrapperSidePadding);
-	margin: 0 auto;
-
-	// overflow: hidden;
+.section {
+	&--about {
+		position: relative;
+	}
 }
 
+//--------------------------------------------------//
+
+//Buttons and Links --------------------------------//
+a, a:visited {
+	text-decoration: none;
+
+	&:hover:not(.button):not(.card):not(.more_info_link):not(.navBar__link) {
+		text-decoration: underline;
+	}
+}
 
 .buttons {
 	display: flex;
 	justify-content: space-between;
-	// width: 100%;
+
 	max-width: remCalc(450px);
 
 	margin: 0 auto;
@@ -114,7 +102,7 @@ address {
 		min-width: remCalc(150px);
 		max-width: remCalc(210px);
 		padding: remCalc(20px);
-		// margin: 0 remCalc(10px);
+
 
 		font-size: remCalc(13px);
 
@@ -219,3 +207,4 @@ a.more_info_link {
 		font-size: remCalc(16px);
 	}
 }
+//--------------------------------------------------//

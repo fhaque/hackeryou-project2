@@ -1,4 +1,4 @@
-//TODO: make it depend on base fontsize
+//Fatin: future make it depend on base fontsize
 @function percentOfWrapper($value) {
 	@return ($value / $wrapperWidth) * 100%;
 }
