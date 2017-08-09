@@ -25,6 +25,32 @@ $(function() {
 
 });
 
+//Smooth Scroll To Section ***********************************//
+//Modified code from
+// https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
+$('a').click(function(e) {
+    //check if there exists a hash (id) to scroll to.
+    if(this.hash !== "") {
+        console.log('clicked');
+
+        const hash = this.hash;
+        const topOfHash = $(hash).offset().top;
+        const heightRatio = topOfHash / $(document).height(); 
+
+        console.log(hash);
+
+        $('html, body').animate({
+
+            scrollTop: topOfHash
+
+        }, 2000 * heightRatio, function() {
+
+            window.location.hash = hash;
+        });
+
+    }
+});
+
 //****************************************************//
 //Hamburger Menu Functionality
 $('#mainMenuBarIcon').click(() =>{
@@ -93,7 +119,7 @@ $filterButtons.click(function(e) {
 });
 
 
-//****************************
+//HERO Animation Classes *****************************************//
 class Hero {
     //accepts $hero, $prev_nav, $next_nav, slideDuration, autoDuration
     constructor(obj) {
