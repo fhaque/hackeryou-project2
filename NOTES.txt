@@ -1,4 +1,0 @@
------------------------
-QUESTIONS
-
--Why advise against using extends in SASS? What about case where a filterButton needs to inherit from .button properties?
